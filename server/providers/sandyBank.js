@@ -1,10 +1,15 @@
 import { fetchUpperWind } from './sandyBank/upperWind.js';
+import { createSandyBankFeeds } from './sandyBank/feeds.js';
 import { makeRateLimiter, clientKey } from './common/rate-limit.js';
 
 /**
  * Sandy Bank Watch: bounded, cached upper-wind readings for the fallout layer.
  * GET /api/sandy-bank/upper-wind?lat=34.02&lon=-83.88
  * The point is rounded to 0.25° (the GFS grid) so the cache key is small.
+ *
+ * Warning feeds for the alert, airspace, disaster and radiation layers:
+ * GET /api/sandy-bank/feeds/{alerts|airspace|disasters|radiation}
+ * Each is cached for its own ttl and served stale when the upstream fails.
  */
 export function sandyBankProxy({
   fetchImpl = (...args) => globalThis.fetch(...args),
@@ -12,14 +17,15 @@ export function sandyBankProxy({
   ttlMs = 3600_000,
   timeoutMs = 40_000,
   fetchWind = fetchUpperWind,
+  feeds = createSandyBankFeeds(),
 } = {}) {
   const cache = new Map();
   const inFlight = new Map();
   const allow = makeRateLimiter({ windowMs: 60_000, max: 60, globalMax: 600 });
 
-  async function acquire(key, load) {
+  async function acquire(key, load, life = ttlMs) {
     const previous = cache.get(key);
-    if (previous && now() - previous.at < ttlMs)
+    if (previous && now() - previous.at < life)
       return { value: previous.value, stale: false };
     if (inFlight.has(key))
       return { value: await inFlight.get(key), stale: false };
@@ -49,6 +55,30 @@ export function sandyBankProxy({
     };
     if (req.method !== 'GET') return json(405, { error: 'method_not_allowed' });
     const url = new URL(req.url || '/', 'http://local');
+    const feedName = /^\/feeds\/([a-z]+)$/.exec(url.pathname)?.[1];
+    if (feedName) {
+      const feed = Object.hasOwn(feeds, feedName) ? feeds[feedName] : null;
+      if (!feed) return json(404, { error: 'unknown_feed' });
+      if (!allow(clientKey(req))) return json(429, { error: 'rate_limited' });
+      try {
+        const { value, stale } = await acquire(
+          `feed:${feedName}`,
+          () => {
+            const controller = new AbortController();
+            const timer = setTimeout(() => controller.abort(), timeoutMs);
+            return Promise.resolve(
+              feed.load({ fetchImpl, signal: controller.signal, now }),
+            )
+              .then((v) => ({ ...v, fetchedAt: new Date(now()).toISOString() }))
+              .finally(() => clearTimeout(timer));
+          },
+          feed.ttlMs,
+        );
+        return json(200, stale ? { ...value, stale: true } : value, stale);
+      } catch {
+        return json(502, { error: `${feedName}_unavailable` });
+      }
+    }
     if (url.pathname !== '/upper-wind')
       return json(404, { error: 'unknown_route' });
     const lat = Number(url.searchParams.get('lat'));

@@ -976,9 +976,20 @@
   "src/layers/fallout/bands.js",
   "src/layers/fallout/source.js",
   "src/layers/sandyBank/index.js",
+  "src/app/layers/warnings.js",
+  "src/layers/warnings/index.js",
+  "src/layers/warnings/feedLayer.js",
+  "src/layers/warnings/alerts.js",
+  "src/layers/warnings/airspace.js",
+  "src/layers/warnings/disasters.js",
+  "src/layers/warnings/radiation.js",
+  "src/layers/warnings/resources.js",
   "src/layers/fallout/model.test.mjs",
   "src/layers/fallout/bands.test.mjs",
   "server/providers/sandyBank.js",
   "server/providers/sandyBank/upperWind.js",
-  "server/providers/sandyBank/upperWind.test.mjs"
+  "server/providers/sandyBank/upperWind.test.mjs",
+  "server/providers/sandyBank/feeds.js",
+  "server/providers/sandyBank/feeds.test.mjs",
+  "src/layers/warnings/warnings.test.mjs"
 ]

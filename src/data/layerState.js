@@ -568,6 +568,11 @@ export const LAYER_STATE_TOKEN_RESERVATIONS =
  */
 export const LAYER_STATE_REGISTRY = Object.freeze([
   Object.freeze({
+    id: 'airspace-alerts',
+    token: '6',
+    disposition: 'enabled-only',
+  }),
+  Object.freeze({
     id: 'ais-live-vessels',
     token: 'a',
     disposition: 'enabled-only',
@@ -597,6 +602,11 @@ export const LAYER_STATE_REGISTRY = Object.freeze([
   Object.freeze({ id: 'directions', token: 'n', disposition: 'enabled-only' }),
   Object.freeze({ id: 'earthquakes', token: 'e', disposition: 'enabled-only' }),
   Object.freeze({
+    id: 'emergency-alerts',
+    token: '5',
+    disposition: 'enabled-only',
+  }),
+  Object.freeze({
     id: 'fallout',
     token: '3',
     disposition: 'enabled-only',
@@ -611,6 +621,11 @@ export const LAYER_STATE_REGISTRY = Object.freeze([
     token: 'f',
     disposition: 'enabled+options',
     optionOwner: 'flights',
+  }),
+  Object.freeze({
+    id: 'global-disasters',
+    token: '7',
+    disposition: 'enabled-only',
   }),
   Object.freeze({ id: 'local-dams', token: 'q', disposition: 'enabled-only' }),
   Object.freeze({
@@ -633,6 +648,11 @@ export const LAYER_STATE_REGISTRY = Object.freeze([
   Object.freeze({
     id: 'military-installations',
     token: 'i',
+    disposition: 'enabled-only',
+  }),
+  Object.freeze({
+    id: 'radiation-watch',
+    token: '8',
     disposition: 'enabled-only',
   }),
   Object.freeze({
@@ -668,6 +688,11 @@ export const LAYER_STATE_REGISTRY = Object.freeze([
     token: '0',
     disposition: 'enabled+options',
     optionOwner: 'street-level',
+  }),
+  Object.freeze({
+    id: 'survival-resources',
+    token: '9',
+    disposition: 'enabled-only',
   }),
   Object.freeze({
     id: 'telegeography-submarine-cables',

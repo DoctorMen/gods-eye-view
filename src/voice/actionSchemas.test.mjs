@@ -38,7 +38,7 @@ test('the complete Realtime tool payload pins the manifest-generated layer relea
     // requested radius and center authority in descriptions only.
     // Street Level adds its toggle enum values and generated alias hint.
     // Sandy Bank Watch adds the fallout and sandy-bank layer enums and aliases.
-    '78c95d81a9c6e67aafd33873bfea6a2fc657def23d028f5928ea3d0db535e450',
+    '45039ec08f7f0ca2b7b6b40af92c126e8c2007e525dbfbc82553e34a270fcc41',
   );
 });
 

@@ -2206,7 +2206,16 @@
       "src/layers/fallout/bands.js",
       "src/layers/fallout/source.js",
       "src/layers/sandyBank/index.js",
-      "src/data/local_data/sandy_bank/sandy_bank.json"
+      "src/app/layers/warnings.js",
+      "src/layers/warnings/index.js",
+      "src/layers/warnings/feedLayer.js",
+      "src/layers/warnings/alerts.js",
+      "src/layers/warnings/airspace.js",
+      "src/layers/warnings/disasters.js",
+      "src/layers/warnings/radiation.js",
+      "src/layers/warnings/resources.js",
+      "src/data/local_data/sandy_bank/sandy_bank.json",
+      "src/data/local_data/nuclear_plants/nuclear_plants.json"
     ],
     "external": [
       "hls.js",
@@ -2736,7 +2745,16 @@
       "src/layers/fallout/bands.js",
       "src/layers/fallout/source.js",
       "src/layers/sandyBank/index.js",
-      "src/data/local_data/sandy_bank/sandy_bank.json"
+      "src/app/layers/warnings.js",
+      "src/layers/warnings/index.js",
+      "src/layers/warnings/feedLayer.js",
+      "src/layers/warnings/alerts.js",
+      "src/layers/warnings/airspace.js",
+      "src/layers/warnings/disasters.js",
+      "src/layers/warnings/radiation.js",
+      "src/layers/warnings/resources.js",
+      "src/data/local_data/sandy_bank/sandy_bank.json",
+      "src/data/local_data/nuclear_plants/nuclear_plants.json"
     ],
     "external": [
       "hls.js",

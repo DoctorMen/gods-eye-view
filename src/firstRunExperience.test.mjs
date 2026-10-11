@@ -674,11 +674,13 @@ test('the voice TOOL SCHEMA matches the pinned contract — the mission mapping 
   // schema, which may not carry top-level anyOf), and Contacts requested-radius
   // list descriptions; the missions still ride existing tools.
   // Street Level adds toggle enum values and the generated alias hint.
-  // Sandy Bank Watch adds the fallout and sandy-bank layer enums and aliases.
-  assert.equal(block.length, 30023, 'serialized tool schema length drifted');
+  // Sandy Bank Watch adds the fallout and sandy-bank layer enums and aliases,
+  // then the five warning layers (alerts, airspace, disasters, radiation,
+  // survival resources).
+  assert.equal(block.length, 30871, 'serialized tool schema length drifted');
   assert.equal(
     crypto.createHash('sha256').update(block).digest('hex'),
-    '7453288ebdc7654ff7df66d1706f579fe3526fffce9c9293b84f2023474aca71',
+    '5a351e6c8843402f118a494532816d0893d5dce25d0edd8be1ffbac9d92a6b23',
     'the first-run missions must ride EXISTING tools: no schema edit, no cache bust',
   );
   const instructions = fs.readFileSync(new URL('../server/providers/openai/instructions.js', import.meta.url), 'utf8');

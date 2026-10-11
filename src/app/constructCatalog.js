@@ -33,6 +33,7 @@ import { createBhoteKoshiEventLayer } from '../data/bhoteKoshiEvent.js';
 import { createBhoteKoshiLocatorLayer } from '../data/bhoteKoshiLocator.js';
 import { createApplicationFallout } from './layers/fallout.js';
 import { createApplicationSandyBank } from './layers/sandyBank.js';
+import { createApplicationWarningLayers } from './layers/warnings.js';
 
 /**
  * Hardware-local layers are registered like any other but never enter share
@@ -167,6 +168,7 @@ export function createApplicationCatalog({
         createApplicationCables({ source: sources.cables }),
         fallout,
         createApplicationSandyBank({ fallout }),
+        ...createApplicationWarningLayers(),
         createApplicationFirms({
           surface,
           id: 'local-firms',
