@@ -225,6 +225,92 @@ const layers = [
     noQuery: 'map overlay; no countable records',
   },
   {
+    id: 'fallout',
+    aliases: ['fallout', 'fallout plume', 'dose bands', 'radiation'],
+    context: true,
+    query: {
+      fields: {
+        name: ['t'],
+        distanceMi: ['n', 'mi'],
+        pHit: ['n', '0-1'],
+        arrivalMinutes: ['n', 'min'],
+        outdoorR: ['n', 'R'],
+        shelterR: ['n', 'R'],
+      },
+      caveat: 'WSEG-10 model; dose at the Sandy Bank house per target',
+    },
+  },
+  {
+    id: 'sandy-bank',
+    aliases: ['the house', 'home', 'sandy bank'],
+    context: true,
+    noQuery: 'one house; read the shelter verdict from the fallout layer',
+  },
+  {
+    id: 'emergency-alerts',
+    aliases: ['emergency alerts', 'warnings', 'alerts at home'],
+    context: true,
+    query: {
+      fields: {
+        event: ['t'],
+        severity: ['t'],
+        actNow: ['b'],
+        atHouse: ['b'],
+        area: ['t'],
+      },
+      caveat:
+        'NWS active alerts; actNow marks civil, nuclear and shelter alerts',
+    },
+  },
+  {
+    id: 'airspace-alerts',
+    aliases: ['emergency squawks', 'gps jamming', 'airspace'],
+    context: true,
+    query: {
+      fields: {
+        kind: ['t'],
+        code: ['t'],
+        meaning: ['t'],
+        share: ['n', '0-1'],
+        aircraft: ['n'],
+      },
+      caveat: 'adsb.lol; GPS jamming is estimated from aircraft accuracy',
+    },
+  },
+  {
+    id: 'global-disasters',
+    aliases: ['disasters', 'gdacs', 'world disasters'],
+    context: true,
+    query: {
+      fields: { type: ['t'], level: ['t'], name: ['t'], country: ['t'] },
+      caveat: 'GDACS current events; Red is the most severe',
+    },
+  },
+  {
+    id: 'radiation-watch',
+    aliases: ['nuclear plants', 'reactors', 'radiation readings'],
+    context: true,
+    query: {
+      fields: {
+        kind: ['t'],
+        name: ['t'],
+        status: ['t'],
+        homeMi: ['n', 'mi'],
+        usvh: ['n', 'uSv/h'],
+      },
+      caveat: 'WRI plants (2019 data) and Safecast readings near the house',
+    },
+  },
+  {
+    id: 'survival-resources',
+    aliases: ['resources', 'hospitals near home', 'supplies near home'],
+    context: true,
+    query: {
+      fields: { kind: ['t'], name: ['t'], miles: ['n', 'mi'] },
+      caveat: 'OpenStreetMap places within 25 miles of the house',
+    },
+  },
+  {
     id: 'wind',
     aliases: ['winds', 'wind map'],
     context: false,

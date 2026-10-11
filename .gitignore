@@ -21,3 +21,6 @@ qa-artifacts/
 3d-models/
 pinokio/ENVIRONMENT
 pinokio/.installed
+
+# OpenStreetMap extracts downloaded by scripts/build-survival-resources.mjs
+.cache/

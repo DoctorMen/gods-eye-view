@@ -1,0 +1,773 @@
+{
+"house": {
+"lat": 34.020463,
+"lon": -83.88046,
+"elev_ft": 1032,
+"address": "3587 Sandy Bank Dr, Auburn GA 30011"
+},
+"generated": "2026-10-11",
+"targets": [
+{
+"name": "Robins AFB",
+"lat": 32.64,
+"lon": -83.59,
+"cls": "mil",
+"p_counterforce": 0.3,
+"p_cities": 0.7,
+"dist_mi": 96.8,
+"bearing": 170
+},
+{
+"name": "Dobbins ARB / Lockheed Marietta",
+"lat": 33.9153,
+"lon": -84.5162,
+"cls": "mil",
+"p_counterforce": 0.3,
+"p_cities": 0.75,
+"dist_mi": 37.1,
+"bearing": 259
+},
+{
+"name": "Fort Eisenhower (Augusta)",
+"lat": 33.42,
+"lon": -82.14,
+"cls": "c2",
+"p_counterforce": 0.7,
+"p_cities": 0.75,
+"dist_mi": 108.3,
+"bearing": 112
+},
+{
+"name": "Fort Moore (Columbus)",
+"lat": 32.36,
+"lon": -84.95,
+"cls": "mil",
+"p_counterforce": 0.2,
+"p_cities": 0.5,
+"dist_mi": 130.3,
+"bearing": 209
+},
+{
+"name": "Fort Stewart / Hunter AAF",
+"lat": 31.87,
+"lon": -81.61,
+"cls": "mil",
+"p_counterforce": 0.2,
+"p_cities": 0.5,
+"dist_mi": 198.5,
+"bearing": 138
+},
+{
+"name": "Savannah River Site",
+"lat": 33.25,
+"lon": -81.65,
+"cls": "wpn",
+"p_counterforce": 0.8,
+"p_cities": 0.85,
+"dist_mi": 138.9,
+"bearing": 112
+},
+{
+"name": "Oak Ridge / Y-12",
+"lat": 36.01,
+"lon": -84.26,
+"cls": "wpn",
+"p_counterforce": 0.85,
+"p_cities": 0.9,
+"dist_mi": 139.1,
+"bearing": 351
+},
+{
+"name": "Redstone Arsenal / Space Command",
+"lat": 34.68,
+"lon": -86.65,
+"cls": "c2",
+"p_counterforce": 0.9,
+"p_cities": 0.9,
+"dist_mi": 164.4,
+"bearing": 287
+},
+{
+"name": "FEMA Region IV (Chamblee)",
+"lat": 33.888,
+"lon": -84.282,
+"cls": "c2",
+"p_counterforce": 0.25,
+"p_cities": 0.5,
+"dist_mi": 24.8,
+"bearing": 248
+},
+{
+"name": "Anniston Army Depot",
+"lat": 33.63,
+"lon": -86.0,
+"cls": "mil",
+"p_counterforce": 0.1,
+"p_cities": 0.35,
+"dist_mi": 124.6,
+"bearing": 258
+},
+{
+"name": "Maxwell AFB",
+"lat": 32.38,
+"lon": -86.36,
+"cls": "mil",
+"p_counterforce": 0.2,
+"p_cities": 0.5,
+"dist_mi": 182.7,
+"bearing": 232
+},
+{
+"name": "Shaw AFB",
+"lat": 33.97,
+"lon": -80.47,
+"cls": "mil",
+"p_counterforce": 0.3,
+"p_cities": 0.6,
+"dist_mi": 195.4,
+"bearing": 90
+},
+{
+"name": "Fort Jackson",
+"lat": 34.0,
+"lon": -80.92,
+"cls": "mil",
+"p_counterforce": 0.1,
+"p_cities": 0.4,
+"dist_mi": 169.6,
+"bearing": 90
+},
+{
+"name": "Arnold AFB",
+"lat": 35.39,
+"lon": -86.09,
+"cls": "mil",
+"p_counterforce": 0.1,
+"p_cities": 0.4,
+"dist_mi": 157.2,
+"bearing": 308
+},
+{
+"name": "Atlanta downtown",
+"lat": 33.749,
+"lon": -84.388,
+"cls": "city",
+"p_counterforce": 0.25,
+"p_cities": 0.97,
+"dist_mi": 34.6,
+"bearing": 237
+},
+{
+"name": "Hartsfield-Jackson airport",
+"lat": 33.6407,
+"lon": -84.4277,
+"cls": "city",
+"p_counterforce": 0.1,
+"p_cities": 0.85,
+"dist_mi": 40.9,
+"bearing": 230
+},
+{
+"name": "Marietta / Cumberland",
+"lat": 33.95,
+"lon": -84.55,
+"cls": "metro",
+"p_counterforce": 0.0,
+"p_cities": 0.45,
+"dist_mi": 38.7,
+"bearing": 263
+},
+{
+"name": "Sandy Springs / Perimeter",
+"lat": 33.92,
+"lon": -84.35,
+"cls": "metro",
+"p_counterforce": 0.0,
+"p_cities": 0.45,
+"dist_mi": 27.8,
+"bearing": 256
+},
+{
+"name": "Duluth / Gwinnett Place",
+"lat": 34.0,
+"lon": -84.14,
+"cls": "metro",
+"p_counterforce": 0.0,
+"p_cities": 0.35,
+"dist_mi": 14.9,
+"bearing": 265
+},
+{
+"name": "Peachtree Corners / Norcross",
+"lat": 33.97,
+"lon": -84.22,
+"cls": "metro",
+"p_counterforce": 0.0,
+"p_cities": 0.3,
+"dist_mi": 19.8,
+"bearing": 260
+},
+{
+"name": "Lawrenceville",
+"lat": 33.9562,
+"lon": -83.988,
+"cls": "metro",
+"p_counterforce": 0.0,
+"p_cities": 0.2,
+"dist_mi": 7.6,
+"bearing": 234
+},
+{
+"name": "Athens",
+"lat": 33.9573,
+"lon": -83.376,
+"cls": "city",
+"p_counterforce": 0.03,
+"p_cities": 0.4,
+"dist_mi": 29.2,
+"bearing": 98
+},
+{
+"name": "Gainesville GA",
+"lat": 34.2979,
+"lon": -83.8241,
+"cls": "city",
+"p_counterforce": 0.02,
+"p_cities": 0.12,
+"dist_mi": 19.4,
+"bearing": 10
+},
+{
+"name": "Winder",
+"lat": 33.9926,
+"lon": -83.7205,
+"cls": "city",
+"p_counterforce": 0.0,
+"p_cities": 0.02,
+"dist_mi": 9.4,
+"bearing": 102
+},
+{
+"name": "Augusta",
+"lat": 33.47,
+"lon": -81.97,
+"cls": "city",
+"p_counterforce": 0.05,
+"p_cities": 0.75,
+"dist_mi": 116.2,
+"bearing": 109
+},
+{
+"name": "Macon",
+"lat": 32.84,
+"lon": -83.63,
+"cls": "city",
+"p_counterforce": 0.03,
+"p_cities": 0.7,
+"dist_mi": 82.8,
+"bearing": 170
+},
+{
+"name": "Columbus GA",
+"lat": 32.46,
+"lon": -84.99,
+"cls": "city",
+"p_counterforce": 0.03,
+"p_cities": 0.7,
+"dist_mi": 125.4,
+"bearing": 211
+},
+{
+"name": "Chattanooga",
+"lat": 35.05,
+"lon": -85.31,
+"cls": "city",
+"p_counterforce": 0.05,
+"p_cities": 0.8,
+"dist_mi": 108.1,
+"bearing": 312
+},
+{
+"name": "Knoxville",
+"lat": 35.96,
+"lon": -83.92,
+"cls": "city",
+"p_counterforce": 0.1,
+"p_cities": 0.8,
+"dist_mi": 134.0,
+"bearing": 359
+},
+{
+"name": "Birmingham",
+"lat": 33.52,
+"lon": -86.8,
+"cls": "city",
+"p_counterforce": 0.1,
+"p_cities": 0.9,
+"dist_mi": 171.2,
+"bearing": 259
+},
+{
+"name": "Huntsville",
+"lat": 34.73,
+"lon": -86.59,
+"cls": "city",
+"p_counterforce": 0.3,
+"p_cities": 0.85,
+"dist_mi": 162.1,
+"bearing": 288
+},
+{
+"name": "Greenville SC",
+"lat": 34.85,
+"lon": -82.4,
+"cls": "city",
+"p_counterforce": 0.05,
+"p_cities": 0.8,
+"dist_mi": 102.0,
+"bearing": 55
+},
+{
+"name": "Columbia SC",
+"lat": 34.0,
+"lon": -81.03,
+"cls": "city",
+"p_counterforce": 0.05,
+"p_cities": 0.8,
+"dist_mi": 163.3,
+"bearing": 90
+},
+{
+"name": "Charlotte",
+"lat": 35.227,
+"lon": -80.843,
+"cls": "city",
+"p_counterforce": 0.15,
+"p_cities": 0.95,
+"dist_mi": 191.8,
+"bearing": 63
+},
+{
+"name": "Montgomery",
+"lat": 32.37,
+"lon": -86.3,
+"cls": "city",
+"p_counterforce": 0.03,
+"p_cities": 0.75,
+"dist_mi": 180.5,
+"bearing": 231
+},
+{
+"name": "Plant Scherer (coal, Juliette)",
+"lat": 33.06,
+"lon": -83.81,
+"cls": "infra",
+"p_counterforce": 0.0,
+"p_cities": 0.2,
+"dist_mi": 66.5,
+"bearing": 176
+},
+{
+"name": "Plant Bowen (coal, Cartersville)",
+"lat": 34.13,
+"lon": -84.92,
+"cls": "infra",
+"p_counterforce": 0.0,
+"p_cities": 0.2,
+"dist_mi": 60.0,
+"bearing": 278
+},
+{
+"name": "Plant Vogtle",
+"lat": 33.1429,
+"lon": -81.7625,
+"cls": "npp",
+"p_counterforce": 0.0,
+"p_cities": 0.08,
+"dist_mi": 136.2,
+"bearing": 116
+},
+{
+"name": "Plant Hatch",
+"lat": 31.934,
+"lon": -82.344,
+"cls": "npp",
+"p_counterforce": 0.0,
+"p_cities": 0.08,
+"dist_mi": 169.4,
+"bearing": 148
+},
+{
+"name": "Oconee plant",
+"lat": 34.79,
+"lon": -82.9,
+"cls": "npp",
+"p_counterforce": 0.0,
+"p_cities": 0.08,
+"dist_mi": 77.1,
+"bearing": 46
+},
+{
+"name": "Sequoyah plant",
+"lat": 35.22,
+"lon": -85.09,
+"cls": "npp",
+"p_counterforce": 0.0,
+"p_cities": 0.08,
+"dist_mi": 107.7,
+"bearing": 321
+},
+{
+"name": "Watts Bar plant",
+"lat": 35.6,
+"lon": -84.79,
+"cls": "npp",
+"p_counterforce": 0.0,
+"p_cities": 0.08,
+"dist_mi": 120.7,
+"bearing": 335
+},
+{
+"name": "Browns Ferry plant",
+"lat": 34.7,
+"lon": -87.12,
+"cls": "npp",
+"p_counterforce": 0.0,
+"p_cities": 0.08,
+"dist_mi": 190.6,
+"bearing": 285
+}
+],
+"winds": {
+"DJF_layer": {
+"bins": [
+0.3,
+0.1,
+0.1,
+0.1,
+0.0,
+0.2,
+0.8,
+14.3,
+45.1,
+30.0,
+8.0,
+1.1
+],
+"sw": 75.8,
+"nw": 19.4,
+"p10": 34.9,
+"p50": 60.6,
+"p90": 86.7,
+"vdir": 264.0,
+"vspd": 55.3
+},
+"monthly": {
+"1": {
+"sw": 75.3,
+"p50": 62.3
+},
+"2": {
+"sw": 75.6,
+"p50": 61.7
+},
+"3": {
+"sw": 63.9,
+"p50": 52.1
+},
+"4": {
+"sw": 59.3,
+"p50": 41.4
+},
+"5": {
+"sw": 50.9,
+"p50": 28.1
+},
+"6": {
+"sw": 45.1,
+"p50": 18.4
+},
+"7": {
+"sw": 38.7,
+"p50": 14.2
+},
+"8": {
+"sw": 38.6,
+"p50": 15.2
+},
+"9": {
+"sw": 44.3,
+"p50": 17.3
+},
+"10": {
+"sw": 55.4,
+"p50": 31.5
+},
+"11": {
+"sw": 64.8,
+"p50": 45.9
+},
+"12": {
+"sw": 76.4,
+"p50": 58.1
+}
+}
+},
+"pf": {
+"1.5": "car or outdoors",
+"2.5": "ground floor as it stands",
+"4": "inner room",
+"10": "stacked-mass corner (realistic)",
+"40": "earth-walled room, 18 in all round",
+"200": "covered trench"
+},
+"odds": {
+"p_heavy": 0.128748,
+"p_gt1000": 0.024595,
+"arrival_heavy_h": {
+"10": 0.5,
+"50": 0.6140258432070806,
+"90": 3.5501326982550334
+},
+"by_wind": {
+"SW to WSW": 0.1985025535225082,
+"W": 0.18035261530344554,
+"WNW to NW": 0.0525182968217515,
+"any other": 0.03864888373441577
+},
+"plans": {
+"Do nothing special": {
+"war": 0.9563714999467615,
+"war_heavy": 0.7714794545531405,
+"year": 0.837754458033391,
+"two": 0.44355931370356305
+},
+"Guide plan as written": {
+"war": 0.9823253810670354,
+"war_heavy": 0.9652141409740388,
+"year": 0.9368783496996301,
+"two": 0.5857449816461893
+},
+"Full plan": {
+"war": 0.9833895945440633,
+"war_heavy": 0.9734779528405739,
+"year": 0.9494898521336992,
+"two": 0.9178611870762624
+}
+},
+"decisions": {
+"pf": [
+[
+"1.5",
+0.6405030992137009,
+0.623181319592928
+],
+[
+"2.5",
+0.7783116196676026,
+0.6333850607284934
+],
+[
+"4",
+0.8737454336013549,
+0.6412815644681092
+],
+[
+"10",
+0.9542038116356463,
+0.6489916329512596
+],
+[
+"40",
+0.9699044438226747,
+0.6473731208309745
+],
+[
+"200",
+0.9704311213108299,
+0.646908116805219
+]
+],
+"food_months": [
+[
+"1",
+0.8613838204279195,
+0.4852358259690633
+],
+[
+"6",
+0.865112292353355,
+0.5556345129488361
+],
+[
+"12",
+0.8671832779215517,
+0.6509538434654781
+],
+[
+"24",
+0.8638935259898515,
+0.8683582128668885
+]
+],
+"water_treat": [
+[
+"none",
+0.8647514333173816,
+0.6172544606228297
+],
+[
+"treat",
+0.8640222188042023,
+0.6631082231890099
+]
+],
+"garden": [
+[
+"none",
+0.864620852824395,
+0.6266567144642391
+],
+[
+"some",
+0.8646052136215947,
+0.6396564524396415
+],
+[
+"skilled",
+0.8639364786292292,
+0.6541832103341689
+]
+],
+"cold": [
+[
+"none",
+0.8651763427176586,
+0.633296987387228
+],
+[
+"bedding",
+0.8651531382573098,
+0.6419989909869968
+],
+[
+"heat",
+0.8628336146336628,
+0.6452767397559253
+]
+],
+"days": [
+[
+"3",
+0.8608947999476518,
+0.6405603771328835
+],
+[
+"7",
+0.8664526887771928,
+0.6398818816627588
+],
+[
+"14",
+0.8657781374359856,
+0.6401245600833116
+]
+],
+"water_days": [
+[
+"0",
+0.8612701083729081,
+0.6396672609027108
+],
+[
+"3",
+0.864834273836,
+0.6398979385898803
+],
+[
+"14",
+0.8670592068940751,
+0.6410022359341122
+]
+],
+"trigger": [
+[
+"at once",
+0.8660379351179026,
+0.6402708546574328
+],
+[
+"wait for fallout",
+0.8627310333634617,
+0.6401073522515149
+]
+],
+"drill": [
+[
+"practised",
+0.865798163516405,
+0.6403976852534355
+],
+[
+"unpractised",
+0.8629812101938968,
+0.6399799666274966
+]
+],
+"away_choice": [
+[
+"go home now",
+0.8625078144461782,
+0.6392489952296714
+],
+[
+"shelter where you are",
+0.8662598086351581,
+0.641124786547484
+]
+],
+"school_choice": [
+[
+"fetch the kids",
+0.8635351772899632,
+0.640263240178556
+],
+[
+"school keeps them",
+0.8652371001318966,
+0.6401146399521704
+]
+],
+"seeds": [
+[
+"none",
+0.864898578197701,
+0.6363845918900259
+],
+[
+"stored",
+0.8638772318141718,
+0.6440012071087797
+]
+]
+},
+"by_doc_two": {
+"D1": 0.9201145041789806,
+"D2": 0.3909835783235181,
+"D3": 0.8959517502851189,
+"D2C": 0.24887831129336138
+},
+"by_soot_two": {
+"under 5 Tg": 0.9262947995498741,
+"5-16": 0.8990332127312172,
+"16-27": 0.695628530927737,
+"27-47": 0.21247386177024286,
+"over 47": 0.002822782089774388
+}
+},
+"sources": {
+"winds": "ERA5 reanalysis 1990-2021, 700-300 hPa layer at the house (Google ARCO mirror)",
+"fallout": "WSEG-10 (Hanifen 1980, DTIC ADA083515), checked against Glasstone & Dolan 1977 ch. IX",
+"odds": "Sandy Bank Monte Carlo v3, 1,000,000 wars (simulations/model/sim3.py)"
+}
+}

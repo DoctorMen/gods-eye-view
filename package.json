@@ -42,6 +42,7 @@
     "opensky:import": "./scripts/opensky-import-client.sh",
     "build": "vite build",
     "build:panel": "node scripts/build-panel.mjs",
+    "build:resources": "node scripts/build-survival-resources.mjs",
     "preview": "vite preview",
     "test": "node scripts/run-unit-tests.mjs",
     "test:track": "node scripts/track-regression.mjs",

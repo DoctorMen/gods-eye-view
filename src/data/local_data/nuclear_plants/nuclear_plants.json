@@ -1,0 +1,1960 @@
+{
+ "source": "World Resources Institute, Global Power Plant Database v1.3.0 (2021, data year 2019), CC BY 4.0, github.com/wri/global-power-plant-database. US status notes added 2026-10-11 from NRC closure records.",
+ "caveat": "Capacity and status are as of 2019 except the noted US changes. Closed plants still hold spent fuel on site.",
+ "zones": {
+  "plumeMi": 10,
+  "ingestionMi": 50
+ },
+ "plants": [
+  {
+   "name": "Oconee",
+   "country": "United States of America",
+   "lat": 34.7939,
+   "lon": -82.8986,
+   "mw": 2667,
+   "status": "operating",
+   "note": null,
+   "homeMi": 77
+  },
+  {
+   "name": "Sequoyah",
+   "country": "United States of America",
+   "lat": 35.2267,
+   "lon": -85.0917,
+   "mw": 2441,
+   "status": "operating",
+   "note": null,
+   "homeMi": 108
+  },
+  {
+   "name": "Watts Bar Nuclear Plant",
+   "country": "United States of America",
+   "lat": 35.6021,
+   "lon": -84.7895,
+   "mw": 2540,
+   "status": "operating",
+   "note": null,
+   "homeMi": 121
+  },
+  {
+   "name": "Vogtle",
+   "country": "United States of America",
+   "lat": 33.1427,
+   "lon": -81.7625,
+   "mw": 2430,
+   "status": "operating",
+   "note": "Units 3 and 4 added 2023-24; about 4,660 MW",
+   "homeMi": 136
+  },
+  {
+   "name": "V C Summer",
+   "country": "United States of America",
+   "lat": 34.2983,
+   "lon": -81.3153,
+   "mw": 1030,
+   "status": "operating",
+   "note": null,
+   "homeMi": 148
+  },
+  {
+   "name": "Edwin I Hatch",
+   "country": "United States of America",
+   "lat": 31.9342,
+   "lon": -82.3447,
+   "mw": 1848,
+   "status": "operating",
+   "note": null,
+   "homeMi": 169
+  },
+  {
+   "name": "Catawba",
+   "country": "United States of America",
+   "lat": 35.0514,
+   "lon": -81.0694,
+   "mw": 2410,
+   "status": "operating",
+   "note": null,
+   "homeMi": 175
+  },
+  {
+   "name": "Browns Ferry",
+   "country": "United States of America",
+   "lat": 34.7042,
+   "lon": -87.1189,
+   "mw": 3494,
+   "status": "operating",
+   "note": null,
+   "homeMi": 191
+  },
+  {
+   "name": "McGuire",
+   "country": "United States of America",
+   "lat": 35.4331,
+   "lon": -80.9486,
+   "mw": 2441,
+   "status": "operating",
+   "note": null,
+   "homeMi": 193
+  },
+  {
+   "name": "Joseph M Farley",
+   "country": "United States of America",
+   "lat": 31.2231,
+   "lon": -85.1116,
+   "mw": 1776,
+   "status": "operating",
+   "note": null,
+   "homeMi": 206
+  },
+  {
+   "name": "H B Robinson",
+   "country": "United States of America",
+   "lat": 34.4017,
+   "lon": -80.1589,
+   "mw": 769,
+   "status": "operating",
+   "note": null,
+   "homeMi": 214
+  },
+  {
+   "name": "Harris",
+   "country": "United States of America",
+   "lat": 35.6334,
+   "lon": -78.9556,
+   "mw": 951,
+   "status": "operating",
+   "note": null,
+   "homeMi": 301
+  },
+  {
+   "name": "Brunswick Nuclear",
+   "country": "United States of America",
+   "lat": 33.9597,
+   "lon": -78.0114,
+   "mw": 2003,
+   "status": "operating",
+   "note": null,
+   "homeMi": 336
+  },
+  {
+   "name": "Grand Gulf",
+   "country": "United States of America",
+   "lat": 32.0081,
+   "lon": -91.0478,
+   "mw": 1440,
+   "status": "operating",
+   "note": null,
+   "homeMi": 438
+  },
+  {
+   "name": "North Anna",
+   "country": "United States of America",
+   "lat": 38.06,
+   "lon": -77.7897,
+   "mw": 1960,
+   "status": "operating",
+   "note": null,
+   "homeMi": 440
+  },
+  {
+   "name": "Surry",
+   "country": "United States of America",
+   "lat": 37.1661,
+   "lon": -76.6986,
+   "mw": 1695,
+   "status": "operating",
+   "note": null,
+   "homeMi": 458
+  },
+  {
+   "name": "Waterford 3",
+   "country": "United States of America",
+   "lat": 29.9953,
+   "lon": -90.4716,
+   "mw": 1200,
+   "status": "operating",
+   "note": null,
+   "homeMi": 476
+  },
+  {
+   "name": "River Bend",
+   "country": "United States of America",
+   "lat": 30.757,
+   "lon": -91.3327,
+   "mw": 1036,
+   "status": "operating",
+   "note": null,
+   "homeMi": 490
+  },
+  {
+   "name": "Beaver Valley",
+   "country": "United States of America",
+   "lat": 40.6219,
+   "lon": -80.4336,
+   "mw": 1847,
+   "status": "operating",
+   "note": null,
+   "homeMi": 494
+  },
+  {
+   "name": "Clinton Power Station",
+   "country": "United States of America",
+   "lat": 40.1719,
+   "lon": -88.8339,
+   "mw": 1138,
+   "status": "operating",
+   "note": null,
+   "homeMi": 505
+  },
+  {
+   "name": "St Lucie",
+   "country": "United States of America",
+   "lat": 27.3486,
+   "lon": -80.2464,
+   "mw": 2160,
+   "status": "operating",
+   "note": null,
+   "homeMi": 509
+  },
+  {
+   "name": "Calvert Cliffs Nuclear Power Plant",
+   "country": "United States of America",
+   "lat": 38.4344,
+   "lon": -76.4417,
+   "mw": 1850,
+   "status": "operating",
+   "note": null,
+   "homeMi": 514
+  },
+  {
+   "name": "Davis Besse",
+   "country": "United States of America",
+   "lat": 41.5967,
+   "lon": -83.0861,
+   "mw": 925,
+   "status": "operating",
+   "note": null,
+   "homeMi": 525
+  },
+  {
+   "name": "Arkansas Nuclear One",
+   "country": "United States of America",
+   "lat": 35.311,
+   "lon": -93.2351,
+   "mw": 1845,
+   "status": "operating",
+   "note": null,
+   "homeMi": 539
+  },
+  {
+   "name": "Callaway",
+   "country": "United States of America",
+   "lat": 38.7589,
+   "lon": -91.7788,
+   "mw": 1236,
+   "status": "operating",
+   "note": null,
+   "homeMi": 548
+  },
+  {
+   "name": "Fermi",
+   "country": "United States of America",
+   "lat": 41.9631,
+   "lon": -83.2581,
+   "mw": 1281,
+   "status": "operating",
+   "note": null,
+   "homeMi": 550
+  },
+  {
+   "name": "Braidwood Generation Station",
+   "country": "United States of America",
+   "lat": 41.2435,
+   "lon": -88.2286,
+   "mw": 2450,
+   "status": "operating",
+   "note": null,
+   "homeMi": 553
+  },
+  {
+   "name": "Perry",
+   "country": "United States of America",
+   "lat": 41.8006,
+   "lon": -81.1439,
+   "mw": 1312,
+   "status": "operating",
+   "note": null,
+   "homeMi": 558
+  },
+  {
+   "name": "Dresden Generating Station",
+   "country": "United States of America",
+   "lat": 41.39,
+   "lon": -88.27,
+   "mw": 2019,
+   "status": "operating",
+   "note": null,
+   "homeMi": 563
+  },
+  {
+   "name": "LaSalle Generating Station",
+   "country": "United States of America",
+   "lat": 41.2455,
+   "lon": -88.6691,
+   "mw": 2340,
+   "status": "operating",
+   "note": null,
+   "homeMi": 564
+  },
+  {
+   "name": "Donald C Cook",
+   "country": "United States of America",
+   "lat": 41.9756,
+   "lon": -86.5652,
+   "mw": 2285,
+   "status": "operating",
+   "note": null,
+   "homeMi": 569
+  },
+  {
+   "name": "Peach Bottom",
+   "country": "United States of America",
+   "lat": 39.7589,
+   "lon": -76.2687,
+   "mw": 2876,
+   "status": "operating",
+   "note": null,
+   "homeMi": 578
+  },
+  {
+   "name": "Palisades",
+   "country": "United States of America",
+   "lat": 42.323,
+   "lon": -86.3146,
+   "mw": 812,
+   "status": "restarting",
+   "note": "Shut 2022; restart under way 2025-26",
+   "homeMi": 589
+  },
+  {
+   "name": "PSEG Hope Creek Generating Station",
+   "country": "United States of America",
+   "lat": 39.4666,
+   "lon": -75.5377,
+   "mw": 1291,
+   "status": "operating",
+   "note": null,
+   "homeMi": 595
+  },
+  {
+   "name": "PSEG Salem Generating Station",
+   "country": "United States of America",
+   "lat": 39.4625,
+   "lon": -75.5358,
+   "mw": 2382,
+   "status": "operating",
+   "note": null,
+   "homeMi": 595
+  },
+  {
+   "name": "Limerick",
+   "country": "United States of America",
+   "lat": 40.2243,
+   "lon": -75.5874,
+   "mw": 2277,
+   "status": "operating",
+   "note": null,
+   "homeMi": 626
+  },
+  {
+   "name": "Byron Generating Station",
+   "country": "United States of America",
+   "lat": 42.0742,
+   "lon": -89.2819,
+   "mw": 2450,
+   "status": "operating",
+   "note": null,
+   "homeMi": 629
+  },
+  {
+   "name": "Turkey Point",
+   "country": "United States of America",
+   "lat": 25.4356,
+   "lon": -80.3308,
+   "mw": 2861,
+   "status": "operating",
+   "note": null,
+   "homeMi": 630
+  },
+  {
+   "name": "Quad Cities Generating Station",
+   "country": "United States of America",
+   "lat": 41.7261,
+   "lon": -90.3103,
+   "mw": 2019,
+   "status": "operating",
+   "note": null,
+   "homeMi": 637
+  },
+  {
+   "name": "TalenEnergy Susquehanna",
+   "country": "United States of America",
+   "lat": 41.0919,
+   "lon": -76.1462,
+   "mw": 2532,
+   "status": "operating",
+   "note": null,
+   "homeMi": 646
+  },
+  {
+   "name": "Duane Arnold Energy Center",
+   "country": "United States of America",
+   "lat": 42.1011,
+   "lon": -91.7781,
+   "mw": 680,
+   "status": "closed",
+   "note": "Shut 2020; spent fuel stored on site",
+   "homeMi": 704
+  },
+  {
+   "name": "Wolf Creek Generating Station",
+   "country": "United States of America",
+   "lat": 38.2393,
+   "lon": -95.6898,
+   "mw": 1268,
+   "status": "operating",
+   "note": null,
+   "homeMi": 720
+  },
+  {
+   "name": "Bruce B",
+   "country": "Canada",
+   "lat": 44.319,
+   "lon": -81.6027,
+   "mw": 3390,
+   "status": "operating",
+   "note": null,
+   "homeMi": 722
+  },
+  {
+   "name": "Bruce A",
+   "country": "Canada",
+   "lat": 44.3391,
+   "lon": -81.5747,
+   "mw": 3220,
+   "status": "operating",
+   "note": null,
+   "homeMi": 723
+  },
+  {
+   "name": "Pickering A",
+   "country": "Canada",
+   "lat": 43.8107,
+   "lon": -79.0689,
+   "mw": 1084,
+   "status": "operating",
+   "note": null,
+   "homeMi": 724
+  },
+  {
+   "name": "Pickering B",
+   "country": "Canada",
+   "lat": 43.8096,
+   "lon": -79.0639,
+   "mw": 2160,
+   "status": "operating",
+   "note": null,
+   "homeMi": 724
+  },
+  {
+   "name": "R E Ginna Nuclear Power Plant",
+   "country": "United States of America",
+   "lat": 43.2777,
+   "lon": -77.3099,
+   "mw": 614,
+   "status": "operating",
+   "note": null,
+   "homeMi": 731
+  },
+  {
+   "name": "Darlington",
+   "country": "Canada",
+   "lat": 43.8697,
+   "lon": -78.7239,
+   "mw": 3740,
+   "status": "operating",
+   "note": null,
+   "homeMi": 734
+  },
+  {
+   "name": "Point Beach Nuclear Plant",
+   "country": "United States of America",
+   "lat": 44.2806,
+   "lon": -87.5369,
+   "mw": 1311,
+   "status": "operating",
+   "note": null,
+   "homeMi": 735
+  },
+  {
+   "name": "Indian Point 2",
+   "country": "United States of America",
+   "lat": 41.2706,
+   "lon": -73.9527,
+   "mw": 1299,
+   "status": "closed",
+   "note": "Shut 2020; spent fuel stored on site",
+   "homeMi": 738
+  },
+  {
+   "name": "Indian Point 3",
+   "country": "United States of America",
+   "lat": 41.2706,
+   "lon": -73.9526,
+   "mw": 1012,
+   "status": "closed",
+   "note": "Shut 2021; spent fuel stored on site",
+   "homeMi": 738
+  },
+  {
+   "name": "James A Fitzpatrick",
+   "country": "United States of America",
+   "lat": 43.5214,
+   "lon": -76.4084,
+   "mw": 883,
+   "status": "operating",
+   "note": null,
+   "homeMi": 769
+  },
+  {
+   "name": "Nine Mile Point Nuclear Station",
+   "country": "United States of America",
+   "lat": 43.5211,
+   "lon": -76.41,
+   "mw": 1901,
+   "status": "operating",
+   "note": null,
+   "homeMi": 769
+  },
+  {
+   "name": "Cooper Nuclear Station",
+   "country": "United States of America",
+   "lat": 40.3628,
+   "lon": -95.6408,
+   "mw": 801,
+   "status": "operating",
+   "note": null,
+   "homeMi": 781
+  },
+  {
+   "name": "South Texas Project",
+   "country": "United States of America",
+   "lat": 28.795,
+   "lon": -96.0481,
+   "mw": 2709,
+   "status": "operating",
+   "note": null,
+   "homeMi": 802
+  },
+  {
+   "name": "Comanche Peak",
+   "country": "United States of America",
+   "lat": 32.2984,
+   "lon": -97.7855,
+   "mw": 2430,
+   "status": "operating",
+   "note": null,
+   "homeMi": 812
+  },
+  {
+   "name": "Millstone",
+   "country": "United States of America",
+   "lat": 41.3107,
+   "lon": -72.1677,
+   "mw": 2163,
+   "status": "operating",
+   "note": null,
+   "homeMi": 814
+  },
+  {
+   "name": "Prairie Island",
+   "country": "United States of America",
+   "lat": 44.622,
+   "lon": -92.6333,
+   "mw": 1186,
+   "status": "operating",
+   "note": null,
+   "homeMi": 868
+  },
+  {
+   "name": "Seabrook",
+   "country": "United States of America",
+   "lat": 42.8992,
+   "lon": -70.8489,
+   "mw": 1242,
+   "status": "operating",
+   "note": null,
+   "homeMi": 933
+  },
+  {
+   "name": "Monticello Nuclear Facility",
+   "country": "United States of America",
+   "lat": 45.3338,
+   "lon": -93.8493,
+   "mw": 685,
+   "status": "operating",
+   "note": null,
+   "homeMi": 943
+  },
+  {
+   "name": "Point Lepreau",
+   "country": "Canada",
+   "lat": 45.0686,
+   "lon": -66.4543,
+   "mw": 660,
+   "status": "operating",
+   "note": null,
+   "homeMi": 1197
+  },
+  {
+   "name": "Laguna Verde",
+   "country": "Mexico",
+   "lat": 19.7208,
+   "lon": -96.4064,
+   "mw": 1510,
+   "status": "operating",
+   "note": null,
+   "homeMi": 1251
+  },
+  {
+   "name": "Palo Verde",
+   "country": "United States of America",
+   "lat": 33.3881,
+   "lon": -112.8617,
+   "mw": 4210,
+   "status": "operating",
+   "note": null,
+   "homeMi": 1661
+  },
+  {
+   "name": "Columbia Generating Station",
+   "country": "United States of America",
+   "lat": 46.4711,
+   "lon": -119.3339,
+   "mw": 1200,
+   "status": "operating",
+   "note": null,
+   "homeMi": 2036
+  },
+  {
+   "name": "Diablo Canyon",
+   "country": "United States of America",
+   "lat": 35.2115,
+   "lon": -120.8555,
+   "mw": 2323,
+   "status": "operating",
+   "note": null,
+   "homeMi": 2092
+  },
+  {
+   "name": "Hunterston B",
+   "country": "United Kingdom",
+   "lat": 55.7204,
+   "lon": -4.8964,
+   "mw": 965,
+   "status": "operating",
+   "note": null,
+   "homeMi": 3906
+  },
+  {
+   "name": "Torness",
+   "country": "United Kingdom",
+   "lat": 55.9679,
+   "lon": -2.4086,
+   "mw": 1185,
+   "status": "operating",
+   "note": null,
+   "homeMi": 3996
+  },
+  {
+   "name": "Heysham 1",
+   "country": "United Kingdom",
+   "lat": 54.0285,
+   "lon": -2.916,
+   "mw": 1155,
+   "status": "operating",
+   "note": null,
+   "homeMi": 4011
+  },
+  {
+   "name": "Heysham 2",
+   "country": "United Kingdom",
+   "lat": 54.0285,
+   "lon": -2.916,
+   "mw": 1230,
+   "status": "operating",
+   "note": null,
+   "homeMi": 4011
+  },
+  {
+   "name": "Hinkley Point B",
+   "country": "United Kingdom",
+   "lat": 51.2085,
+   "lon": -3.1334,
+   "mw": 955,
+   "status": "operating",
+   "note": null,
+   "homeMi": 4056
+  },
+  {
+   "name": "Hartlepool",
+   "country": "United Kingdom",
+   "lat": 54.6341,
+   "lon": -1.1801,
+   "mw": 1180,
+   "status": "operating",
+   "note": null,
+   "homeMi": 4067
+  },
+  {
+   "name": "FLAMANVILLE",
+   "country": "France",
+   "lat": 49.5366,
+   "lon": -1.8823,
+   "mw": 2660,
+   "status": "operating",
+   "note": null,
+   "homeMi": 4143
+  },
+  {
+   "name": "CN ALMARAZ 1",
+   "country": "Spain",
+   "lat": 39.807,
+   "lon": -5.6986,
+   "mw": 2017,
+   "status": "operating",
+   "note": null,
+   "homeMi": 4198
+  },
+  {
+   "name": "Sizewell B",
+   "country": "United Kingdom",
+   "lat": 52.2145,
+   "lon": 1.6206,
+   "mw": 1198,
+   "status": "operating",
+   "note": null,
+   "homeMi": 4227
+  },
+  {
+   "name": "Dungeness B",
+   "country": "United Kingdom",
+   "lat": 50.9133,
+   "lon": 0.964,
+   "mw": 1050,
+   "status": "operating",
+   "note": null,
+   "homeMi": 4231
+  },
+  {
+   "name": "PALUEL",
+   "country": "France",
+   "lat": 49.8582,
+   "lon": 0.6354,
+   "mw": 5320,
+   "status": "operating",
+   "note": null,
+   "homeMi": 4242
+  },
+  {
+   "name": "PENLY",
+   "country": "France",
+   "lat": 49.9764,
+   "lon": 1.2107,
+   "mw": 2660,
+   "status": "operating",
+   "note": null,
+   "homeMi": 4263
+  },
+  {
+   "name": "GRAVELINES",
+   "country": "France",
+   "lat": 51.0141,
+   "lon": 2.1332,
+   "mw": 5460,
+   "status": "operating",
+   "note": null,
+   "homeMi": 4276
+  },
+  {
+   "name": "CHINON",
+   "country": "France",
+   "lat": 47.2254,
+   "lon": 0.1656,
+   "mw": 3620,
+   "status": "operating",
+   "note": null,
+   "homeMi": 4286
+  },
+  {
+   "name": "BLAYAIS",
+   "country": "France",
+   "lat": 45.256,
+   "lon": -0.6932,
+   "mw": 3640,
+   "status": "operating",
+   "note": null,
+   "homeMi": 4297
+  },
+  {
+   "name": "TRILLO",
+   "country": "Spain",
+   "lat": 40.7016,
+   "lon": -2.6227,
+   "mw": 1003,
+   "status": "operating",
+   "note": null,
+   "homeMi": 4325
+  },
+  {
+   "name": "CIVAUX",
+   "country": "France",
+   "lat": 46.4563,
+   "lon": 0.6548,
+   "mw": 2990,
+   "status": "operating",
+   "note": null,
+   "homeMi": 4327
+  },
+  {
+   "name": "Borssele Nuclear Power Station",
+   "country": "Netherlands",
+   "lat": 51.4312,
+   "lon": 3.7174,
+   "mw": 485,
+   "status": "operating",
+   "note": null,
+   "homeMi": 4330
+  },
+  {
+   "name": "ST LAURENT",
+   "country": "France",
+   "lat": 47.7197,
+   "lon": 1.5783,
+   "mw": 1830,
+   "status": "operating",
+   "note": null,
+   "homeMi": 4335
+  },
+  {
+   "name": "DOEL 4",
+   "country": "Belgium",
+   "lat": 51.3254,
+   "lon": 4.2597,
+   "mw": 2910,
+   "status": "operating",
+   "note": null,
+   "homeMi": 4355
+  },
+  {
+   "name": "DAMPIERRE",
+   "country": "France",
+   "lat": 47.7321,
+   "lon": 2.5185,
+   "mw": 3560,
+   "status": "operating",
+   "note": null,
+   "homeMi": 4375
+  },
+  {
+   "name": "BELLEVILLE",
+   "country": "France",
+   "lat": 47.5103,
+   "lon": 2.875,
+   "mw": 2620,
+   "status": "operating",
+   "note": null,
+   "homeMi": 4396
+  },
+  {
+   "name": "GOLFECH",
+   "country": "France",
+   "lat": 44.106,
+   "lon": 0.8443,
+   "mw": 2620,
+   "status": "operating",
+   "note": null,
+   "homeMi": 4397
+  },
+  {
+   "name": "NOGENT",
+   "country": "France",
+   "lat": 48.5171,
+   "lon": 3.5181,
+   "mw": 2620,
+   "status": "operating",
+   "note": null,
+   "homeMi": 4397
+  },
+  {
+   "name": "CHOOZ",
+   "country": "France",
+   "lat": 50.09,
+   "lon": 4.7894,
+   "mw": 3000,
+   "status": "operating",
+   "note": null,
+   "homeMi": 4408
+  },
+  {
+   "name": "TIHANGE 1N",
+   "country": "Belgium",
+   "lat": 50.5342,
+   "lon": 5.2751,
+   "mw": 962,
+   "status": "operating",
+   "note": null,
+   "homeMi": 4416
+  },
+  {
+   "name": "TIHANGE 3",
+   "country": "Belgium",
+   "lat": 50.5342,
+   "lon": 5.2751,
+   "mw": 2054,
+   "status": "operating",
+   "note": null,
+   "homeMi": 4416
+  },
+  {
+   "name": "CN COFRENTES",
+   "country": "Spain",
+   "lat": 39.2134,
+   "lon": -1.0509,
+   "mw": 1064,
+   "status": "operating",
+   "note": null,
+   "homeMi": 4442
+  },
+  {
+   "name": "EMSLAND",
+   "country": "Germany",
+   "lat": 52.4716,
+   "lon": 7.3204,
+   "mw": 1406,
+   "status": "closed",
+   "note": "Germany shut its last reactors in April 2023",
+   "homeMi": 4445
+  },
+  {
+   "name": "ASCO GR",
+   "country": "Spain",
+   "lat": 41.2008,
+   "lon": 0.5679,
+   "mw": 1990,
+   "status": "operating",
+   "note": null,
+   "homeMi": 4464
+  },
+  {
+   "name": "BROKDORF",
+   "country": "Germany",
+   "lat": 53.8506,
+   "lon": 9.345,
+   "mw": 1480,
+   "status": "closed",
+   "note": "Germany shut its last reactors in April 2023",
+   "homeMi": 4484
+  },
+  {
+   "name": "CATTENOM",
+   "country": "France",
+   "lat": 49.416,
+   "lon": 6.2169,
+   "mw": 5200,
+   "status": "operating",
+   "note": null,
+   "homeMi": 4485
+  },
+  {
+   "name": "VANDELLOS GR 2",
+   "country": "Spain",
+   "lat": 40.9511,
+   "lon": 0.8662,
+   "mw": 1045,
+   "status": "operating",
+   "note": null,
+   "homeMi": 4485
+  },
+  {
+   "name": "Ringhals",
+   "country": "Sweden",
+   "lat": 57.2574,
+   "lon": 12.1087,
+   "mw": 3932,
+   "status": "operating",
+   "note": null,
+   "homeMi": 4486
+  },
+  {
+   "name": "Bilibino",
+   "country": "Russia",
+   "lat": 68.0503,
+   "lon": 166.5389,
+   "mw": 48,
+   "status": "operating",
+   "note": null,
+   "homeMi": 4524
+  },
+  {
+   "name": "ST ALBAN",
+   "country": "France",
+   "lat": 45.4043,
+   "lon": 4.7554,
+   "mw": 2670,
+   "status": "operating",
+   "note": null,
+   "homeMi": 4536
+  },
+  {
+   "name": "Grohnde",
+   "country": "Germany",
+   "lat": 52.0356,
+   "lon": 9.4135,
+   "mw": 1360,
+   "status": "closed",
+   "note": "Germany shut its last reactors in April 2023",
+   "homeMi": 4538
+  },
+  {
+   "name": "BUGEY",
+   "country": "France",
+   "lat": 45.7973,
+   "lon": 5.2706,
+   "mw": 3580,
+   "status": "operating",
+   "note": null,
+   "homeMi": 4548
+  },
+  {
+   "name": "CRUAS",
+   "country": "France",
+   "lat": 44.6325,
+   "lon": 4.7546,
+   "mw": 3660,
+   "status": "operating",
+   "note": null,
+   "homeMi": 4559
+  },
+  {
+   "name": "TRICASTIN 1",
+   "country": "France",
+   "lat": 44.3311,
+   "lon": 4.7311,
+   "mw": 3660,
+   "status": "operating",
+   "note": null,
+   "homeMi": 4566
+  },
+  {
+   "name": "PHILIPPSBURG-2",
+   "country": "Germany",
+   "lat": 49.2529,
+   "lon": 8.4364,
+   "mw": 1468,
+   "status": "closed",
+   "note": "Germany shut its last reactors in April 2023",
+   "homeMi": 4581
+  },
+  {
+   "name": "FESSENHEIM",
+   "country": "France",
+   "lat": 47.9032,
+   "lon": 7.5631,
+   "mw": 1760,
+   "status": "operating",
+   "note": null,
+   "homeMi": 4584
+  },
+  {
+   "name": "Forsmark",
+   "country": "Sweden",
+   "lat": 60.4028,
+   "lon": 18.1744,
+   "mw": 3227,
+   "status": "operating",
+   "note": null,
+   "homeMi": 4585
+  },
+  {
+   "name": "Kernkraftwerk M\u00fchleberg",
+   "country": "Switzerland",
+   "lat": 46.9689,
+   "lon": 7.2684,
+   "mw": 390,
+   "status": "operating",
+   "note": null,
+   "homeMi": 4600
+  },
+  {
+   "name": "NECKARWESTHEIM-2",
+   "country": "Germany",
+   "lat": 49.0408,
+   "lon": 9.1759,
+   "mw": 1400,
+   "status": "closed",
+   "note": "Germany shut its last reactors in April 2023",
+   "homeMi": 4617
+  },
+  {
+   "name": "Kernkraftwerk G\u00f6sgen",
+   "country": "Switzerland",
+   "lat": 47.3656,
+   "lon": 7.968,
+   "mw": 1035,
+   "status": "operating",
+   "note": null,
+   "homeMi": 4617
+  },
+  {
+   "name": "Kernkraftwerk Leibstadt",
+   "country": "Switzerland",
+   "lat": 47.6012,
+   "lon": 8.1845,
+   "mw": 1245,
+   "status": "operating",
+   "note": null,
+   "homeMi": 4619
+  },
+  {
+   "name": "Kernkraftwerk Beznau",
+   "country": "Switzerland",
+   "lat": 47.552,
+   "lon": 8.2281,
+   "mw": 760,
+   "status": "operating",
+   "note": null,
+   "homeMi": 4623
+  },
+  {
+   "name": "Oskarshamn",
+   "country": "Sweden",
+   "lat": 57.413,
+   "lon": 16.6683,
+   "mw": 2603,
+   "status": "operating",
+   "note": null,
+   "homeMi": 4634
+  },
+  {
+   "name": "Olkiluoto 1",
+   "country": "Finland",
+   "lat": 61.2371,
+   "lon": 21.4433,
+   "mw": 1760,
+   "status": "operating",
+   "note": null,
+   "homeMi": 4654
+  },
+  {
+   "name": "Kernkraft Gundremmingen",
+   "country": "Germany",
+   "lat": 48.515,
+   "lon": 10.4016,
+   "mw": 2572,
+   "status": "closed",
+   "note": "Germany shut its last reactors in April 2023",
+   "homeMi": 4683
+  },
+  {
+   "name": "Kola NPP",
+   "country": "Russia",
+   "lat": 67.4667,
+   "lon": 32.4667,
+   "mw": 1760,
+   "status": "operating",
+   "note": null,
+   "homeMi": 4693
+  },
+  {
+   "name": "Almirante \u00c1lvaro Alberto - Unidade I (Antiga Angra I)",
+   "country": "Brazil",
+   "lat": -23.0087,
+   "lon": -44.4574,
+   "mw": 640,
+   "status": "operating",
+   "note": null,
+   "homeMi": 4715
+  },
+  {
+   "name": "Almirante \u00c1lvaro Alberto - Unidade II (Antiga Angra II)",
+   "country": "Brazil",
+   "lat": -23.0072,
+   "lon": -44.4588,
+   "mw": 1350,
+   "status": "operating",
+   "note": null,
+   "homeMi": 4715
+  },
+  {
+   "name": "EMBALSE",
+   "country": "Argentina",
+   "lat": -32.2316,
+   "lon": -64.4422,
+   "mw": 648,
+   "status": "operating",
+   "note": null,
+   "homeMi": 4749
+  },
+  {
+   "name": "ISAR-2",
+   "country": "Germany",
+   "lat": 48.6049,
+   "lon": 12.2936,
+   "mw": 1485,
+   "status": "closed",
+   "note": "Germany shut its last reactors in April 2023",
+   "homeMi": 4757
+  },
+  {
+   "name": "Temel\u00edn",
+   "country": "Czech Republic",
+   "lat": 49.1796,
+   "lon": 14.3795,
+   "mw": 2133,
+   "status": "operating",
+   "note": null,
+   "homeMi": 4822
+  },
+  {
+   "name": "Loviisa Y1",
+   "country": "Finland",
+   "lat": 60.3708,
+   "lon": 26.3468,
+   "mw": 992,
+   "status": "operating",
+   "note": null,
+   "homeMi": 4825
+  },
+  {
+   "name": "Dukonavy",
+   "country": "Czech Republic",
+   "lat": 49.0852,
+   "lon": 16.1479,
+   "mw": 2040,
+   "status": "operating",
+   "note": null,
+   "homeMi": 4894
+  },
+  {
+   "name": "Leningrad NPP",
+   "country": "Russia",
+   "lat": 59.8528,
+   "lon": 29.0486,
+   "mw": 4000,
+   "status": "operating",
+   "note": null,
+   "homeMi": 4922
+  },
+  {
+   "name": "ATUCHA I",
+   "country": "Argentina",
+   "lat": -33.967,
+   "lon": -59.2059,
+   "mw": 370,
+   "status": "operating",
+   "note": null,
+   "homeMi": 4962
+  },
+  {
+   "name": "ATUCHA II",
+   "country": "Argentina",
+   "lat": -33.9674,
+   "lon": -59.2045,
+   "mw": 745,
+   "status": "operating",
+   "note": null,
+   "homeMi": 4962
+  },
+  {
+   "name": "Bohunice Nuclear Power Plant Slovakia",
+   "country": "Slovakia",
+   "lat": 48.496,
+   "lon": 17.6816,
+   "mw": 880,
+   "status": "operating",
+   "note": null,
+   "homeMi": 4975
+  },
+  {
+   "name": "Krsko (NEK)",
+   "country": "Slovenia",
+   "lat": 45.9389,
+   "lon": 15.516,
+   "mw": 696,
+   "status": "operating",
+   "note": null,
+   "homeMi": 4979
+  },
+  {
+   "name": "Mochovce Nuclear Power Plant Slovakia",
+   "country": "Slovakia",
+   "lat": 48.2621,
+   "lon": 18.459,
+   "mw": 880,
+   "status": "operating",
+   "note": null,
+   "homeMi": 5014
+  },
+  {
+   "name": "Paksi Atomer\u0151m\u0171",
+   "country": "Hungary",
+   "lat": 46.5739,
+   "lon": 18.8536,
+   "mw": 1887,
+   "status": "operating",
+   "note": null,
+   "homeMi": 5092
+  },
+  {
+   "name": "Rivne (Rouno)",
+   "country": "Ukraine",
+   "lat": 51.3245,
+   "lon": 25.8974,
+   "mw": 2835,
+   "status": "operating",
+   "note": null,
+   "homeMi": 5171
+  },
+  {
+   "name": "Kalinn NPP",
+   "country": "Russia",
+   "lat": 57.905,
+   "lon": 35.0614,
+   "mw": 4000,
+   "status": "operating",
+   "note": null,
+   "homeMi": 5174
+  },
+  {
+   "name": "Khmelnytska",
+   "country": "Ukraine",
+   "lat": 50.3024,
+   "lon": 26.6473,
+   "mw": 2000,
+   "status": "operating",
+   "note": null,
+   "homeMi": 5239
+  },
+  {
+   "name": "Smolensk",
+   "country": "Russia",
+   "lat": 54.1647,
+   "lon": 33.2367,
+   "mw": 3000,
+   "status": "operating",
+   "note": null,
+   "homeMi": 5290
+  },
+  {
+   "name": "KOZLODUY",
+   "country": "Bulgaria",
+   "lat": 43.7438,
+   "lon": 23.7723,
+   "mw": 2000,
+   "status": "operating",
+   "note": null,
+   "homeMi": 5400
+  },
+  {
+   "name": "Kursk",
+   "country": "Russia",
+   "lat": 51.675,
+   "lon": 35.6056,
+   "mw": 4000,
+   "status": "operating",
+   "note": null,
+   "homeMi": 5478
+  },
+  {
+   "name": "South Ukraine",
+   "country": "Ukraine",
+   "lat": 47.812,
+   "lon": 31.22,
+   "mw": 3000,
+   "status": "operating",
+   "note": null,
+   "homeMi": 5508
+  },
+  {
+   "name": "NPP Cernavoda",
+   "country": "Romania",
+   "lat": 44.3215,
+   "lon": 28.0568,
+   "mw": 1298,
+   "status": "operating",
+   "note": null,
+   "homeMi": 5545
+  },
+  {
+   "name": "Novovoronezh",
+   "country": "Russia",
+   "lat": 51.2822,
+   "lon": 39.21,
+   "mw": 1880,
+   "status": "operating",
+   "note": null,
+   "homeMi": 5608
+  },
+  {
+   "name": "Zaporozhye",
+   "country": "Ukraine",
+   "lat": 47.5119,
+   "lon": 34.5863,
+   "mw": 6000,
+   "status": "operating",
+   "note": null,
+   "homeMi": 5639
+  },
+  {
+   "name": "Balakovo NPP",
+   "country": "Russia",
+   "lat": 52.0928,
+   "lon": 47.9539,
+   "mw": 4000,
+   "status": "operating",
+   "note": null,
+   "homeMi": 5815
+  },
+  {
+   "name": "Beloyarsk",
+   "country": "Russia",
+   "lat": 56.8417,
+   "lon": 61.3225,
+   "mw": 1480,
+   "status": "operating",
+   "note": null,
+   "homeMi": 5837
+  },
+  {
+   "name": "Rostov NPP",
+   "country": "Russia",
+   "lat": 47.5993,
+   "lon": 42.3717,
+   "mw": 4000,
+   "status": "operating",
+   "note": null,
+   "homeMi": 5891
+  },
+  {
+   "name": "Armenian-2",
+   "country": "Armenia",
+   "lat": 40.1805,
+   "lon": 44.1498,
+   "mw": 375,
+   "status": "operating",
+   "note": null,
+   "homeMi": 6334
+  },
+  {
+   "name": "Tomari",
+   "country": "Japan",
+   "lat": 43.0367,
+   "lon": 140.5125,
+   "mw": 2000,
+   "status": "operating",
+   "note": null,
+   "homeMi": 6421
+  },
+  {
+   "name": "Higashi-Dori",
+   "country": "Japan",
+   "lat": 41.188,
+   "lon": 141.3903,
+   "mw": 1100,
+   "status": "operating",
+   "note": null,
+   "homeMi": 6498
+  },
+  {
+   "name": "Onagawa",
+   "country": "Japan",
+   "lat": 38.4,
+   "lon": 141.5,
+   "mw": 2174,
+   "status": "operating",
+   "note": null,
+   "homeMi": 6650
+  },
+  {
+   "name": "Fukushima Daina",
+   "country": "Japan",
+   "lat": 37.3164,
+   "lon": 141.0265,
+   "mw": 4400,
+   "status": "operating",
+   "note": null,
+   "homeMi": 6725
+  },
+  {
+   "name": "Tokai Daini",
+   "country": "Japan",
+   "lat": 36.4215,
+   "lon": 140.6028,
+   "mw": 1100,
+   "status": "operating",
+   "note": null,
+   "homeMi": 6789
+  },
+  {
+   "name": "Kashiwazaki Kariwa",
+   "country": "Japan",
+   "lat": 37.4259,
+   "lon": 138.5941,
+   "mw": 8212,
+   "status": "operating",
+   "note": null,
+   "homeMi": 6796
+  },
+  {
+   "name": "Shika",
+   "country": "Japan",
+   "lat": 37.0609,
+   "lon": 136.7265,
+   "mw": 1746,
+   "status": "operating",
+   "note": null,
+   "homeMi": 6874
+  },
+  {
+   "name": "Hamaoka",
+   "country": "Japan",
+   "lat": 34.6235,
+   "lon": 138.1421,
+   "mw": 3617,
+   "status": "operating",
+   "note": null,
+   "homeMi": 6970
+  },
+  {
+   "name": "Tsuruga",
+   "country": "Japan",
+   "lat": 35.7519,
+   "lon": 136.0189,
+   "mw": 1160,
+   "status": "operating",
+   "note": null,
+   "homeMi": 6972
+  },
+  {
+   "name": "Mihama",
+   "country": "Japan",
+   "lat": 35.7024,
+   "lon": 135.9634,
+   "mw": 826,
+   "status": "operating",
+   "note": null,
+   "homeMi": 6976
+  },
+  {
+   "name": "Ohi",
+   "country": "Japan",
+   "lat": 35.5424,
+   "lon": 135.6544,
+   "mw": 4710,
+   "status": "operating",
+   "note": null,
+   "homeMi": 6995
+  },
+  {
+   "name": "Takahama",
+   "country": "Japan",
+   "lat": 35.5223,
+   "lon": 135.5036,
+   "mw": 3392,
+   "status": "operating",
+   "note": null,
+   "homeMi": 7001
+  },
+  {
+   "name": "Shimane",
+   "country": "Japan",
+   "lat": 35.5379,
+   "lon": 132.9991,
+   "mw": 820,
+   "status": "operating",
+   "note": null,
+   "homeMi": 7073
+  },
+  {
+   "name": "Hanul",
+   "country": "South Korea",
+   "lat": 37.0931,
+   "lon": 129.383,
+   "mw": 5900,
+   "status": "operating",
+   "note": null,
+   "homeMi": 7078
+  },
+  {
+   "name": "Hongyanhe",
+   "country": "China",
+   "lat": 39.8,
+   "lon": 121.48,
+   "mw": 4183,
+   "status": "operating",
+   "note": null,
+   "homeMi": 7086
+  },
+  {
+   "name": "Shin-Wolsong",
+   "country": "South Korea",
+   "lat": 35.7221,
+   "lon": 129.4786,
+   "mw": 2000,
+   "status": "operating",
+   "note": null,
+   "homeMi": 7159
+  },
+  {
+   "name": "Wolsong",
+   "country": "South Korea",
+   "lat": 35.7111,
+   "lon": 129.4743,
+   "mw": 2799,
+   "status": "operating",
+   "note": null,
+   "homeMi": 7160
+  },
+  {
+   "name": "CEFR",
+   "country": "China",
+   "lat": 39.74,
+   "lon": 116.03,
+   "mw": 20,
+   "status": "operating",
+   "note": null,
+   "homeMi": 7184
+  },
+  {
+   "name": "Bushehr",
+   "country": "Iran",
+   "lat": 28.8298,
+   "lon": 50.8857,
+   "mw": 1000,
+   "status": "operating",
+   "note": null,
+   "homeMi": 7184
+  },
+  {
+   "name": "Kori",
+   "country": "South Korea",
+   "lat": 35.3199,
+   "lon": 129.2948,
+   "mw": 3137,
+   "status": "operating",
+   "note": null,
+   "homeMi": 7188
+  },
+  {
+   "name": "Shin-Kori",
+   "country": "South Korea",
+   "lat": 35.3271,
+   "lon": 129.3017,
+   "mw": 3340,
+   "status": "operating",
+   "note": null,
+   "homeMi": 7188
+  },
+  {
+   "name": "Ikata",
+   "country": "Japan",
+   "lat": 33.4909,
+   "lon": 132.3088,
+   "mw": 2022,
+   "status": "operating",
+   "note": null,
+   "homeMi": 7215
+  },
+  {
+   "name": "Hanbit",
+   "country": "South Korea",
+   "lat": 35.4105,
+   "lon": 126.4175,
+   "mw": 5900,
+   "status": "operating",
+   "note": null,
+   "homeMi": 7256
+  },
+  {
+   "name": "Genkai",
+   "country": "Japan",
+   "lat": 33.5152,
+   "lon": 129.836,
+   "mw": 3478,
+   "status": "operating",
+   "note": null,
+   "homeMi": 7284
+  },
+  {
+   "name": "Sendai",
+   "country": "Japan",
+   "lat": 31.8335,
+   "lon": 130.1887,
+   "mw": 1780,
+   "status": "operating",
+   "note": null,
+   "homeMi": 7376
+  },
+  {
+   "name": "Tianwan",
+   "country": "China",
+   "lat": 34.69,
+   "lon": 119.46,
+   "mw": 1980,
+   "status": "operating",
+   "note": null,
+   "homeMi": 7455
+  },
+  {
+   "name": "Chasnupp",
+   "country": "Pakistan",
+   "lat": 32.392,
+   "lon": 71.4616,
+   "mw": 1330,
+   "status": "operating",
+   "note": null,
+   "homeMi": 7576
+  },
+  {
+   "name": "Fangjiashan",
+   "country": "China",
+   "lat": 30.44,
+   "lon": 120.94,
+   "mw": 2024,
+   "status": "operating",
+   "note": null,
+   "homeMi": 7698
+  },
+  {
+   "name": "Qinshan 2",
+   "country": "China",
+   "lat": 30.433,
+   "lon": 120.9501,
+   "mw": 4101,
+   "status": "operating",
+   "note": null,
+   "homeMi": 7698
+  },
+  {
+   "name": "Ningde",
+   "country": "China",
+   "lat": 27.0446,
+   "lon": 120.2855,
+   "mw": 4072,
+   "status": "operating",
+   "note": null,
+   "homeMi": 7931
+  },
+  {
+   "name": "Kanupp",
+   "country": "Pakistan",
+   "lat": 24.845,
+   "lon": 66.7888,
+   "mw": 137,
+   "status": "operating",
+   "note": null,
+   "homeMi": 7937
+  },
+  {
+   "name": "N.A.P.S",
+   "country": "India",
+   "lat": 28.156,
+   "lon": 78.4089,
+   "mw": 440,
+   "status": "operating",
+   "note": null,
+   "homeMi": 7987
+  },
+  {
+   "name": "Chinshan",
+   "country": "Taiwan",
+   "lat": 25.2861,
+   "lon": 121.5874,
+   "mw": 1272,
+   "status": "closed",
+   "note": "Taiwan shut its last reactor in May 2025",
+   "homeMi": 8012
+  },
+  {
+   "name": "Kuosheng",
+   "country": "Taiwan",
+   "lat": 25.2025,
+   "lon": 121.6629,
+   "mw": 2040,
+   "status": "closed",
+   "note": "Taiwan shut its last reactor in May 2025",
+   "homeMi": 8015
+  },
+  {
+   "name": "Fuqing",
+   "country": "China",
+   "lat": 25.4426,
+   "lon": 119.444,
+   "mw": 4000,
+   "status": "operating",
+   "note": null,
+   "homeMi": 8053
+  },
+  {
+   "name": "Koeberg",
+   "country": "South Africa",
+   "lat": -33.6737,
+   "lon": 18.4281,
+   "mw": 1800,
+   "status": "operating",
+   "note": null,
+   "homeMi": 8099
+  },
+  {
+   "name": "DAE RAJASTHAN",
+   "country": "India",
+   "lat": 24.8747,
+   "lon": 75.6189,
+   "mw": 100,
+   "status": "operating",
+   "note": null,
+   "homeMi": 8151
+  },
+  {
+   "name": "R.A.P.S.",
+   "country": "India",
+   "lat": 24.8747,
+   "lon": 75.6189,
+   "mw": 1080,
+   "status": "operating",
+   "note": null,
+   "homeMi": 8151
+  },
+  {
+   "name": "Maanshan",
+   "country": "Taiwan",
+   "lat": 21.9589,
+   "lon": 120.7501,
+   "mw": 1902,
+   "status": "closed",
+   "note": "Taiwan shut its last reactor in May 2025",
+   "homeMi": 8244
+  },
+  {
+   "name": "KAKRAPARA",
+   "country": "India",
+   "lat": 21.2384,
+   "lon": 73.3489,
+   "mw": 440,
+   "status": "operating",
+   "note": null,
+   "homeMi": 8336
+  },
+  {
+   "name": "Ling Ao",
+   "country": "China",
+   "lat": 22.6,
+   "lon": 114.55,
+   "mw": 3914,
+   "status": "operating",
+   "note": null,
+   "homeMi": 8341
+  },
+  {
+   "name": "Daya Bay",
+   "country": "China",
+   "lat": 22.6,
+   "lon": 114.54,
+   "mw": 1888,
+   "status": "operating",
+   "note": null,
+   "homeMi": 8342
+  },
+  {
+   "name": "TARAPUR",
+   "country": "India",
+   "lat": 19.8294,
+   "lon": 72.6617,
+   "mw": 1400,
+   "status": "operating",
+   "note": null,
+   "homeMi": 8409
+  },
+  {
+   "name": "Yangjiang",
+   "country": "China",
+   "lat": 21.71,
+   "lon": 112.26,
+   "mw": 4000,
+   "status": "operating",
+   "note": null,
+   "homeMi": 8443
+  },
+  {
+   "name": "Fangchenggang",
+   "country": "China",
+   "lat": 21.67,
+   "lon": 108.56,
+   "mw": 2000,
+   "status": "operating",
+   "note": null,
+   "homeMi": 8503
+  },
+  {
+   "name": "Changjiang",
+   "country": "China",
+   "lat": 19.46,
+   "lon": 108.9,
+   "mw": 1220,
+   "status": "operating",
+   "note": null,
+   "homeMi": 8647
+  },
+  {
+   "name": "KAIGA",
+   "country": "India",
+   "lat": 14.865,
+   "lon": 74.4385,
+   "mw": 880,
+   "status": "operating",
+   "note": null,
+   "homeMi": 8770
+  },
+  {
+   "name": "M.A.P.P.",
+   "country": "India",
+   "lat": 12.5571,
+   "lon": 80.1754,
+   "mw": 440,
+   "status": "operating",
+   "note": null,
+   "homeMi": 9052
+  },
+  {
+   "name": "KUNDANKULAM",
+   "country": "India",
+   "lat": 8.1691,
+   "lon": 77.1327,
+   "mw": 2000,
+   "status": "operating",
+   "note": null,
+   "homeMi": 9268
+  },
+  {
+   "name": "Kudankulam",
+   "country": "India",
+   "lat": 8.1689,
+   "lon": 77.7126,
+   "mw": 2000,
+   "status": "operating",
+   "note": null,
+   "homeMi": 9282
+  }
+ ]
+}
