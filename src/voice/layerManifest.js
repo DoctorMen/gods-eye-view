@@ -225,6 +225,28 @@ const layers = [
     noQuery: 'map overlay; no countable records',
   },
   {
+    id: 'fallout',
+    aliases: ['fallout', 'fallout plume', 'dose bands', 'radiation'],
+    context: true,
+    query: {
+      fields: {
+        name: ['t'],
+        distanceMi: ['n', 'mi'],
+        pHit: ['n', '0-1'],
+        arrivalMinutes: ['n', 'min'],
+        outdoorR: ['n', 'R'],
+        shelterR: ['n', 'R'],
+      },
+      caveat: 'WSEG-10 model; dose at the Sandy Bank house per target',
+    },
+  },
+  {
+    id: 'sandy-bank',
+    aliases: ['the house', 'home', 'sandy bank'],
+    context: true,
+    noQuery: 'one house; read the shelter verdict from the fallout layer',
+  },
+  {
     id: 'wind',
     aliases: ['winds', 'wind map'],
     context: false,

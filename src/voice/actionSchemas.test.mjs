@@ -37,7 +37,8 @@ test('the complete Realtime tool payload pins the manifest-generated layer relea
     // omit top-level anyOf (OpenAI rejects it). Contacts list routing preserves
     // requested radius and center authority in descriptions only.
     // Street Level adds its toggle enum values and generated alias hint.
-    '9eb113454c5af5e32e27ffcdc7919d0e4600ba1d204f8f175e071152be41ad0f',
+    // Sandy Bank Watch adds the fallout and sandy-bank layer enums and aliases.
+    '78c95d81a9c6e67aafd33873bfea6a2fc657def23d028f5928ea3d0db535e450',
   );
 });
 

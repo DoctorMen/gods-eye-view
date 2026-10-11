@@ -968,5 +968,17 @@
   "src/tools/views.test.mjs",
   "src/app/embed.test.mjs",
   "src/tools/globePanel.test.mjs",
-  "src/costEndpointThrottle.test.mjs"
+  "src/costEndpointThrottle.test.mjs",
+  "src/app/layers/fallout.js",
+  "src/app/layers/sandyBank.js",
+  "src/layers/fallout/index.js",
+  "src/layers/fallout/model.js",
+  "src/layers/fallout/bands.js",
+  "src/layers/fallout/source.js",
+  "src/layers/sandyBank/index.js",
+  "src/layers/fallout/model.test.mjs",
+  "src/layers/fallout/bands.test.mjs",
+  "server/providers/sandyBank.js",
+  "server/providers/sandyBank/upperWind.js",
+  "server/providers/sandyBank/upperWind.test.mjs"
 ]

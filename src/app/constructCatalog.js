@@ -31,6 +31,8 @@ import { createInfrastructureLayers } from '../data/infrastructure.js';
 import { localGeoJsonServices } from './localGeojsonServices.js';
 import { createBhoteKoshiEventLayer } from '../data/bhoteKoshiEvent.js';
 import { createBhoteKoshiLocatorLayer } from '../data/bhoteKoshiLocator.js';
+import { createApplicationFallout } from './layers/fallout.js';
+import { createApplicationSandyBank } from './layers/sandyBank.js';
 
 /**
  * Hardware-local layers are registered like any other but never enter share
@@ -102,6 +104,7 @@ export function createApplicationCatalog({
     const satellites = createApplicationSatellites({
       source: sources.satellites,
     });
+    const fallout = createApplicationFallout();
     const catalog = createLayerCatalog(
       [
         createBhoteKoshiEventLayer(),
@@ -162,6 +165,8 @@ export function createApplicationCatalog({
         createCyclonesLayer({ feed: sources.cyclones }),
         ...createInfrastructureLayers(localGeoJsonServices),
         createApplicationCables({ source: sources.cables }),
+        fallout,
+        createApplicationSandyBank({ fallout }),
         createApplicationFirms({
           surface,
           id: 'local-firms',
