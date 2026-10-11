@@ -10,7 +10,17 @@
  *              cells estimated from aircraft position accuracy (NACp)
  *   disasters  GDACS current disaster events (world)
  *   radiation  Safecast dose-rate readings within 200 km of the house
+ *   resources  the saved offline list of places near the house, built once by
+ *              scripts/build-survival-resources.mjs (no upstream at all)
  */
+
+import { readFile } from 'node:fs/promises';
+
+/** Where scripts/build-survival-resources.mjs writes the saved place list. */
+export const SURVIVAL_RESOURCES_PATH = new URL(
+  '../../../src/data/local_data/survival_resources/survival_resources.json',
+  import.meta.url,
+);
 
 export const NWS_ALERTS_URL =
   'https://api.weather.gov/alerts/active?status=actual&message_type=alert,update';
@@ -390,7 +400,10 @@ async function soft(load, notes, label) {
 export const SANDY_BANK_HOUSE = Object.freeze({ lat: 34.0205, lon: -83.8805 });
 
 /** Feed definitions keyed by route name. `ttlMs` is the server cache life. */
-export function createSandyBankFeeds({ house = SANDY_BANK_HOUSE } = {}) {
+export function createSandyBankFeeds({
+  house = SANDY_BANK_HOUSE,
+  readSaved = () => readFile(SURVIVAL_RESOURCES_PATH, 'utf8'),
+} = {}) {
   if (!finite(house?.lat) || !finite(house?.lon))
     throw new TypeError('Sandy Bank feeds need the house point');
   return {
@@ -498,6 +511,24 @@ export function createSandyBankFeeds({ house = SANDY_BANK_HOUSE } = {}) {
             await getJson(fetchImpl, `${SAFECAST_URL}?${query}`, { signal }),
           ),
           since,
+        };
+      },
+    },
+    resources: {
+      ttlMs: 3_600_000,
+      async load() {
+        let text;
+        try {
+          text = await readSaved();
+        } catch {
+          throw new Error('saved list not built');
+        }
+        const body = JSON.parse(text);
+        if (!Array.isArray(body?.rows)) throw new Error('saved list invalid');
+        return {
+          rows: body.rows,
+          builtAt: body.builtAt ?? null,
+          source: body.source ?? null,
         };
       },
     },

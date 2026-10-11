@@ -104,5 +104,12 @@ last good picture stays on the map and the layer's status says so.
 | Radiation Watch | WRI Global Power Plant Database (bundled), Safecast | All 195 nuclear power plants with the 10-mile plume zone and 50-mile food-and-water zone, distance from the house on the label (nearest: Oconee, 77 mi). Live Safecast dose-rate readings within 200 km over the last 30 days: green normal, yellow ≥0.3, orange ≥1, red ≥10 µSv/h. Plants still draw when Safecast is unreachable. Plant data is from 2019; closures since then in the US, Germany and Taiwan are marked. |
 | Survival Resources Near Home | OpenStreetMap via the app's Overpass proxy | Hospitals, clinics, pharmacies, fire and police stations, shelters, water points, groceries, fuel and hardware stores within 25 miles. The nearest of each kind is labelled with its distance. |
 
-All five need internet. They are warning-period tools; the printed guide
+Survival Resources works offline once its saved list is built. Run
+`npm run build:resources` once (it downloads the Geofabrik OpenStreetMap
+extract for Georgia, several hundred MB, and keeps the places within 25 miles in
+`src/data/local_data/survival_resources/survival_resources.json`); add
+`-- --region new-jersey` for another state. With the saved list the layer needs
+no Overpass server; without it the layer tries the live Overpass proxy.
+
+The other four layers need internet. They are warning-period tools; the printed guide
 remains the no-power plan.

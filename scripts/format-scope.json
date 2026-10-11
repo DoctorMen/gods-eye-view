@@ -990,6 +990,8 @@
   "server/providers/sandyBank/upperWind.js",
   "server/providers/sandyBank/upperWind.test.mjs",
   "server/providers/sandyBank/feeds.js",
+  "server/providers/sandyBank/shapefile.js",
+  "scripts/build-survival-resources.mjs",
   "server/providers/sandyBank/feeds.test.mjs",
   "src/layers/warnings/warnings.test.mjs"
 ]

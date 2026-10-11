@@ -12,12 +12,15 @@ export const RESOURCE_RADIUS_M = 40_000;
 export const RESOURCE_KINDS = Object.freeze([
   Object.freeze({
     kind: 'hospital',
+    // Geofabrik shapefile `fclass` values for the saved offline list.
+    fclasses: ['hospital'],
     label: 'Hospital',
     color: '#ff3b30',
     tags: [['amenity', 'hospital']],
   }),
   Object.freeze({
     kind: 'clinic',
+    fclasses: ['clinic', 'doctors'],
     label: 'Clinic',
     color: '#ff6b6b',
     tags: [
@@ -27,24 +30,28 @@ export const RESOURCE_KINDS = Object.freeze([
   }),
   Object.freeze({
     kind: 'pharmacy',
+    fclasses: ['pharmacy'],
     label: 'Pharmacy',
     color: '#ff9f0a',
     tags: [['amenity', 'pharmacy']],
   }),
   Object.freeze({
     kind: 'fire',
+    fclasses: ['fire_station'],
     label: 'Fire station',
     color: '#ff453a',
     tags: [['amenity', 'fire_station']],
   }),
   Object.freeze({
     kind: 'police',
+    fclasses: ['police'],
     label: 'Police',
     color: '#0a84ff',
     tags: [['amenity', 'police']],
   }),
   Object.freeze({
     kind: 'shelter',
+    fclasses: ['shelter'],
     label: 'Shelter',
     color: '#30d158',
     tags: [
@@ -55,6 +62,13 @@ export const RESOURCE_KINDS = Object.freeze([
   }),
   Object.freeze({
     kind: 'water',
+    fclasses: [
+      'drinking_water',
+      'spring',
+      'water_well',
+      'water_tower',
+      'water_works',
+    ],
     label: 'Water',
     color: '#64d2ff',
     tags: [
@@ -66,18 +80,21 @@ export const RESOURCE_KINDS = Object.freeze([
   }),
   Object.freeze({
     kind: 'food',
+    fclasses: ['supermarket'],
     label: 'Grocery',
     color: '#ffd60a',
     tags: [['shop', 'supermarket']],
   }),
   Object.freeze({
     kind: 'fuel',
+    fclasses: ['fuel'],
     label: 'Fuel',
     color: '#bf5af2',
     tags: [['amenity', 'fuel']],
   }),
   Object.freeze({
     kind: 'hardware',
+    fclasses: ['doityourself', 'hardware'],
     label: 'Hardware',
     color: '#ac8e68',
     tags: [
@@ -153,6 +170,45 @@ export function nearestByKind(rows) {
   return nearest;
 }
 
+/** Fill a saved row's label and colour from its kind; null when the kind is unknown. */
+export function decorateResource(row) {
+  const kind = RESOURCE_KINDS.find((k) => k.kind === row?.kind);
+  if (!kind || !Number.isFinite(row.lat) || !Number.isFinite(row.lon))
+    return null;
+  return { ...row, label: kind.label, color: kind.color };
+}
+
+/**
+ * Geofabrik shapefile places → saved resource rows within `radiusM` of the
+ * house, nearest first. Used by scripts/build-survival-resources.mjs.
+ */
+export function placesToResources(places, house, radiusM = RESOURCE_RADIUS_M) {
+  const byFclass = new Map();
+  for (const k of RESOURCE_KINDS)
+    for (const f of k.fclasses) byFclass.set(f, k.kind);
+  const limitMi = radiusM / 1609.344;
+  const rows = [];
+  const seen = new Set();
+  for (const p of places) {
+    const kind = byFclass.get(p.fclass);
+    if (!kind || !Number.isFinite(p.lat) || !Number.isFinite(p.lon)) continue;
+    const miles = milesBetween(house, p);
+    if (miles > limitMi) continue;
+    const id = `osm/${p.osmId ?? `${p.lat},${p.lon}`}`;
+    if (seen.has(id)) continue;
+    seen.add(id);
+    rows.push({
+      id,
+      kind,
+      name: p.name ? String(p.name).slice(0, 120) : null,
+      lat: Math.round(p.lat * 1e6) / 1e6,
+      lon: Math.round(p.lon * 1e6) / 1e6,
+      miles: Math.round(miles * 10) / 10,
+    });
+  }
+  return rows.sort((a, b) => a.miles - b.miles);
+}
+
 /** Overpass statuses that mean "busy, try again shortly". */
 const RETRYABLE_STATUS = new Set([429, 502, 503, 504]);
 
@@ -175,16 +231,40 @@ function pause(ms, signal) {
  * POST the query to the app's bounded Overpass proxy. The public Overpass
  * servers often answer "too busy" (429/503/504) at peak hours, so a busy reply
  * is retried after `retryDelaysMs` before the refresh is reported as failed.
+ *
+ * A saved offline list (built once by scripts/build-survival-resources.mjs and
+ * served from /api/sandy-bank/feeds/resources) is used first when it exists, so
+ * the layer works with no Overpass server and no internet.
  */
 export function createResourceSource({
   house,
   fetchImpl = (...args) => globalThis.fetch(...args),
   url = '/api/overpass',
+  savedUrl = '/api/sandy-bank/feeds/resources',
   retryDelaysMs = [5_000, 15_000, 45_000],
   wait = pause,
 }) {
+  async function saved(signal) {
+    try {
+      const response = await fetchImpl(savedUrl, {
+        signal,
+        headers: { Accept: 'application/json' },
+      });
+      if (!response.ok) return null;
+      const body = await response.json();
+      const rows = (body?.rows ?? []).map(decorateResource).filter(Boolean);
+      return rows.length
+        ? { rows, saved: true, builtAt: body.builtAt ?? null }
+        : null;
+    } catch (e) {
+      signal?.throwIfAborted();
+      return null;
+    }
+  }
   return {
     async getSnapshot({ signal } = {}) {
+      const offline = await saved(signal);
+      if (offline) return offline;
       const body = new URLSearchParams({
         data: resourceQuery(house),
       }).toString();
@@ -247,7 +327,7 @@ export function drawResources(snapshot) {
     entities,
     overlay,
     count: rows.length,
-    summary: `${rows.length} places within 25 mi · nearest ${parts.join(', ') || 'none found'}`,
+    summary: `${rows.length} places within 25 mi${snapshot?.saved ? ' (saved list)' : ''} · nearest ${parts.join(', ') || 'none found'}`,
   };
 }
 

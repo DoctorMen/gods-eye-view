@@ -293,3 +293,93 @@ test('proxy serves feeds, caches them, and serves stale on failure', async () =>
   assert.equal(JSON.parse(res.body).stale, true);
   assert.equal((await get('/feeds/nope')).status, 404);
 });
+
+/** Build a tiny Geofabrik-style .shp/.dbf pair: one point and one polygon. */
+function fixtureShapefile() {
+  const fields = [
+    ['osm_id', 12],
+    ['fclass', 28],
+    ['name', 40],
+  ];
+  const rows = [
+    ['111', 'hospital', 'Northeast Georgia Medical Center Barrow'],
+    ['222', 'supermarket', 'Kroger'],
+  ];
+  const recordLength = 1 + fields.reduce((n, [, len]) => n + len, 0);
+  const headerLength = 32 + 32 * fields.length + 1;
+  const dbf = Buffer.alloc(headerLength + recordLength * rows.length + 1, 0);
+  dbf[0] = 3;
+  dbf.writeUInt32LE(rows.length, 4);
+  dbf.writeUInt16LE(headerLength, 8);
+  dbf.writeUInt16LE(recordLength, 10);
+  fields.forEach(([name, len], i) => {
+    dbf.write(name, 32 + 32 * i, 'latin1');
+    dbf[32 + 32 * i + 11] = 'C'.charCodeAt(0);
+    dbf[32 + 32 * i + 16] = len;
+  });
+  dbf[headerLength - 1] = 0x0d;
+  rows.forEach((row, r) => {
+    let p = headerLength + r * recordLength;
+    dbf[p++] = 0x20;
+    row.forEach((value, i) => {
+      const len = fields[i][1];
+      dbf.fill(0x20, p, p + len);
+      dbf.write(value, p, 'utf8');
+      p += len;
+    });
+  });
+  const point = Buffer.alloc(8 + 20);
+  point.writeInt32BE(1, 0);
+  point.writeInt32BE(10, 4);
+  point.writeInt32LE(1, 8);
+  point.writeDoubleLE(-83.76, 12);
+  point.writeDoubleLE(33.99, 20);
+  const poly = Buffer.alloc(8 + 4 + 32 + 8);
+  poly.writeInt32BE(2, 0);
+  poly.writeInt32BE((poly.length - 8) / 2, 4);
+  poly.writeInt32LE(5, 8);
+  [-83.9, 34.0, -83.88, 34.02].forEach((v, i) =>
+    poly.writeDoubleLE(v, 12 + 8 * i),
+  );
+  const shp = Buffer.concat([Buffer.alloc(100), point, poly]);
+  return { shp, dbf };
+}
+
+test('shapefile reader joins shapes and rows, polygons by bbox centre', async () => {
+  const { readShapefilePlaces } = await import('./shapefile.js');
+  const { shp, dbf } = fixtureShapefile();
+  const places = readShapefilePlaces(shp, dbf).map((p) => ({
+    ...p,
+    lat: Math.round(p.lat * 1e6) / 1e6,
+  }));
+  assert.deepEqual(places, [
+    {
+      osmId: '111',
+      fclass: 'hospital',
+      name: 'Northeast Georgia Medical Center Barrow',
+      lon: -83.76,
+      lat: 33.99,
+    },
+    {
+      osmId: '222',
+      fclass: 'supermarket',
+      name: 'Kroger',
+      lon: -83.89,
+      lat: 34.01,
+    },
+  ]);
+});
+
+test('resources feed serves the saved list and fails clearly when it is not built', async () => {
+  const saved = createSandyBankFeeds({
+    readSaved: async () =>
+      JSON.stringify({ builtAt: 'x', rows: [{ id: 'osm/1' }] }),
+  });
+  assert.deepEqual((await saved.resources.load()).rows, [{ id: 'osm/1' }]);
+  const missing = createSandyBankFeeds({
+    readSaved: async () => {
+      throw Object.assign(new Error('ENOENT'), { code: 'ENOENT' });
+    },
+  });
+  await assert.rejects(missing.resources.load(), /saved list not built/);
+});

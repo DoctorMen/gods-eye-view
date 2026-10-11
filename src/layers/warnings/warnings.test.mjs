@@ -244,7 +244,8 @@ test('resources retry a busy Overpass and give up on other errors', async () => 
   const source = createResourceSource({
     house,
     wait: async (ms) => waits.push(ms),
-    fetchImpl: async () => {
+    fetchImpl: async (url) => {
+      if (url.includes('feeds')) return { ok: false, status: 502 };
       const status = statuses.shift();
       return {
         ok: status === 200,
@@ -258,7 +259,10 @@ test('resources retry a busy Overpass and give up on other errors', async () => 
   const failing = createResourceSource({
     house,
     wait: async () => {},
-    fetchImpl: async () => ({ ok: false, status: 400 }),
+    fetchImpl: async (url) =>
+      url.includes('feeds')
+        ? { ok: false, status: 502 }
+        : { ok: false, status: 400 },
   });
   await assert.rejects(failing.getSnapshot(), /Overpass HTTP 400/);
   const busy = createResourceSource({
@@ -267,4 +271,60 @@ test('resources retry a busy Overpass and give up on other errors', async () => 
     fetchImpl: async () => ({ ok: false, status: 503 }),
   });
   await assert.rejects(busy.getSnapshot(), /Overpass HTTP 503/);
+});
+
+test('saved places become resources within 25 miles, nearest first', async () => {
+  const { placesToResources } = await import('./resources.js');
+  const rows = placesToResources(
+    [
+      { osmId: '1', fclass: 'hospital', name: 'Far', lat: 34.5, lon: -83.88 },
+      { osmId: '2', fclass: 'fuel', name: 'Near', lat: 34.03, lon: -83.88 },
+      { osmId: '3', fclass: 'bench', name: 'Bench', lat: 34.02, lon: -83.88 },
+      { osmId: '2', fclass: 'fuel', name: 'Near', lat: 34.03, lon: -83.88 },
+    ],
+    house,
+  );
+  assert.deepEqual(
+    rows.map((r) => [r.id, r.kind, r.name]),
+    [['osm/2', 'fuel', 'Near']],
+  );
+});
+
+test('resources use the saved list first and only go live without one', async () => {
+  const urls = [];
+  const savedRow = {
+    id: 'osm/2',
+    kind: 'fuel',
+    name: 'Near',
+    lat: 34.03,
+    lon: -83.88,
+    miles: 0.6,
+  };
+  const withSaved = createResourceSource({
+    house,
+    fetchImpl: async (url) => {
+      urls.push(url);
+      return {
+        ok: true,
+        json: async () => ({ builtAt: 'b', rows: [savedRow] }),
+      };
+    },
+  });
+  const snapshot = await withSaved.getSnapshot();
+  assert.equal(snapshot.saved, true);
+  assert.equal(snapshot.rows[0].label, 'Fuel');
+  assert.deepEqual(urls, ['/api/sandy-bank/feeds/resources']);
+  assert.match(drawResources(snapshot).summary, /saved list/);
+  const calls = [];
+  const live = createResourceSource({
+    house,
+    wait: async () => {},
+    fetchImpl: async (url) => {
+      calls.push(url);
+      if (url.includes('feeds')) return { ok: false, status: 502 };
+      return { ok: true, status: 200, json: async () => ({ elements: [] }) };
+    },
+  });
+  assert.equal((await live.getSnapshot()).saved, undefined);
+  assert.deepEqual(calls, ['/api/sandy-bank/feeds/resources', '/api/overpass']);
 });
