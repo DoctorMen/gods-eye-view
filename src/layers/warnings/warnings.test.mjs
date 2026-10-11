@@ -237,3 +237,34 @@ test('feed layer keeps the last picture when a refresh fails', async () => {
   assert.deepEqual(layer.getAnalystRecords(), [{ a: 1 }]);
   layer.destroy(viewer);
 });
+
+test('resources retry a busy Overpass and give up on other errors', async () => {
+  const statuses = [503, 504, 200];
+  const waits = [];
+  const source = createResourceSource({
+    house,
+    wait: async (ms) => waits.push(ms),
+    fetchImpl: async () => {
+      const status = statuses.shift();
+      return {
+        ok: status === 200,
+        status,
+        json: async () => ({ elements: [] }),
+      };
+    },
+  });
+  assert.deepEqual((await source.getSnapshot()).rows, []);
+  assert.deepEqual(waits, [5000, 15000]);
+  const failing = createResourceSource({
+    house,
+    wait: async () => {},
+    fetchImpl: async () => ({ ok: false, status: 400 }),
+  });
+  await assert.rejects(failing.getSnapshot(), /Overpass HTTP 400/);
+  const busy = createResourceSource({
+    house,
+    wait: async () => {},
+    fetchImpl: async () => ({ ok: false, status: 503 }),
+  });
+  await assert.rejects(busy.getSnapshot(), /Overpass HTTP 503/);
+});

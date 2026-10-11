@@ -53,7 +53,7 @@ export function radiationSummary(snapshot) {
   ];
   if (snapshot?.readingError) parts.push('live readings unavailable');
   else if (!rows.length)
-    parts.push('no live readings within 500 km in 30 days');
+    parts.push('no live readings within 200 km in 30 days');
   else
     parts.push(
       `${rows.length} live readings, highest ${worst.usvh} µSv/h (${worst.level})`,

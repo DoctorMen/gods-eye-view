@@ -153,24 +153,60 @@ export function nearestByKind(rows) {
   return nearest;
 }
 
-/** POST the query to the app's bounded Overpass proxy. */
+/** Overpass statuses that mean "busy, try again shortly". */
+const RETRYABLE_STATUS = new Set([429, 502, 503, 504]);
+
+/** Wait `ms`, or reject at once when `signal` aborts. */
+function pause(ms, signal) {
+  return new Promise((resolve, reject) => {
+    const timer = setTimeout(resolve, ms);
+    signal?.addEventListener(
+      'abort',
+      () => {
+        clearTimeout(timer);
+        reject(signal.reason);
+      },
+      { once: true },
+    );
+  });
+}
+
+/**
+ * POST the query to the app's bounded Overpass proxy. The public Overpass
+ * servers often answer "too busy" (429/503/504) at peak hours, so a busy reply
+ * is retried after `retryDelaysMs` before the refresh is reported as failed.
+ */
 export function createResourceSource({
   house,
   fetchImpl = (...args) => globalThis.fetch(...args),
   url = '/api/overpass',
+  retryDelaysMs = [5_000, 15_000, 45_000],
+  wait = pause,
 }) {
   return {
     async getSnapshot({ signal } = {}) {
-      const response = await fetchImpl(url, {
-        method: 'POST',
-        signal,
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams({ data: resourceQuery(house) }).toString(),
-      });
-      if (!response.ok) throw new Error(`Overpass HTTP ${response.status}`);
-      const payload = await response.json();
-      signal?.throwIfAborted();
-      return { rows: normalizeResources(payload, house) };
+      const body = new URLSearchParams({
+        data: resourceQuery(house),
+      }).toString();
+      for (let attempt = 0; ; attempt++) {
+        const response = await fetchImpl(url, {
+          method: 'POST',
+          signal,
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body,
+        });
+        if (response.ok) {
+          const payload = await response.json();
+          signal?.throwIfAborted();
+          return { rows: normalizeResources(payload, house) };
+        }
+        if (
+          !RETRYABLE_STATUS.has(response.status) ||
+          attempt >= retryDelaysMs.length
+        )
+          throw new Error(`Overpass HTTP ${response.status}`);
+        await wait(retryDelaysMs[attempt], signal);
+      }
     },
   };
 }

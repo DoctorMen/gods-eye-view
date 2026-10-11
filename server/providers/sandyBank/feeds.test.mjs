@@ -227,7 +227,7 @@ test('airspace feed queries squawks then sample centres, and fails only when all
   );
 });
 
-test('radiation feed asks Safecast for 30 days within 500 km', async () => {
+test('radiation feed asks Safecast for 30 days within 200 km', async () => {
   const feeds = createSandyBankFeeds();
   let seen;
   const value = await feeds.radiation.load({
@@ -237,7 +237,7 @@ test('radiation feed asks Safecast for 30 days within 500 km', async () => {
       return reply([]);
     },
   });
-  assert.equal(seen.searchParams.get('distance'), '500000');
+  assert.equal(seen.searchParams.get('distance'), '200000');
   assert.equal(seen.searchParams.get('captured_after'), '2026-09-11');
   assert.deepEqual(value.rows, []);
 });

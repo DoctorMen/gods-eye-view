@@ -9,7 +9,7 @@
  *   airspace   adsb.lol emergency squawks (7500/7600/7700) + GPS-interference
  *              cells estimated from aircraft position accuracy (NACp)
  *   disasters  GDACS current disaster events (world)
- *   radiation  Safecast dose-rate readings within 500 km of the house
+ *   radiation  Safecast dose-rate readings within 200 km of the house
  */
 
 export const NWS_ALERTS_URL =
@@ -17,7 +17,7 @@ export const NWS_ALERTS_URL =
 export const SWPC_KP_URL =
   'https://services.swpc.noaa.gov/products/noaa-planetary-k-index.json';
 export const GDACS_URL =
-  'https://www.gdacs.org/gdacsapi/api/events/geteventlist/MAP';
+  'https://www.gdacs.org/gdacsapi/api/events/geteventlist/SEARCH';
 export const ADSB_LOL_BASE = 'https://api.adsb.lol/v2';
 export const SAFECAST_URL = 'https://api.safecast.org/measurements.json';
 
@@ -489,10 +489,9 @@ export function createSandyBankFeeds({ house = SANDY_BANK_HOUSE } = {}) {
         const query = new URLSearchParams({
           latitude: String(house.lat),
           longitude: String(house.lon),
-          distance: '500000',
+          distance: '200000',
           captured_after: since,
-          order: 'captured_at desc',
-          per_page: '1000',
+          per_page: '200',
         });
         return {
           rows: normalizeSafecast(
